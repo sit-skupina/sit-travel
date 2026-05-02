@@ -117,19 +117,59 @@ function Index() {
       </section>
 
       {/* Stats bar */}
-      <section className="border-b border-border bg-background">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px bg-border md:grid-cols-4">
+      <section
+        className="bg-[#F7F5F0] py-10"
+        style={{
+          borderTop: "1px solid #D3D1C7",
+          borderBottom: "1px solid #D3D1C7",
+        }}
+      >
+        <div className="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-4">
           {[
-            { num: "35 let", label: "Na trhu od roku 1991" },
-            { num: "IATA", label: "Akreditovaný agent" },
-            { num: "ACK ČR", label: "Člen asociace" },
-            { num: "B2B only", label: "Výhradně firmy" },
-          ].map((s) => (
-            <div key={s.label} className="bg-background px-6 py-10 text-center">
-              <div className="font-serif text-3xl font-bold text-primary md:text-4xl">{s.num}</div>
-              <div className="mt-2 text-sm text-muted-foreground">{s.label}</div>
-            </div>
-          ))}
+            { num: "34 let", label: "Na trhu nepřetržitě od roku 1991" },
+            { num: "40+", label: "Předních firem a institucí" },
+            { num: "IATA", label: "Akreditovaný agent od roku 1995" },
+            { num: "ACK ČR", label: "Člen asociace cestovních kanceláří" },
+          ].map((s, i, arr) => {
+            const isLast = i === arr.length - 1;
+            const isLastRowMobile = i >= arr.length - 2;
+            return (
+              <div
+                key={s.label}
+                className="stats-item flex flex-col items-center justify-center text-center px-5 py-5 md:py-0"
+                style={{
+                  borderRight: !isLast ? "1px solid #D3D1C7" : undefined,
+                  borderBottom: !isLastRowMobile ? "1px solid #D3D1C7" : undefined,
+                }}
+                data-last={isLast}
+                data-last-row={isLastRowMobile}
+              >
+                <div
+                  className="font-serif"
+                  style={{
+                    fontSize: "36px",
+                    fontWeight: 700,
+                    color: "#F5A623",
+                    lineHeight: 1.1,
+                  }}
+                >
+                  {s.num}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "13px",
+                    fontWeight: 500,
+                    color: "#6B6A66",
+                    lineHeight: 1.4,
+                    marginTop: "8px",
+                  }}
+                >
+                  {s.label}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
