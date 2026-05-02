@@ -130,19 +130,10 @@ function Index() {
             { num: "40+", label: "Předních firem a institucí" },
             { num: "IATA", label: "Akreditovaný agent od roku 1995" },
             { num: "ACK ČR", label: "Člen asociace cestovních kanceláří" },
-          ].map((s, i, arr) => {
-            const isLast = i === arr.length - 1;
-            const isLastRowMobile = i >= arr.length - 2;
-            return (
+          ].map((s) => (
               <div
                 key={s.label}
                 className="stats-item flex flex-col items-center justify-center text-center px-5 py-5 md:py-0"
-                style={{
-                  borderRight: !isLast ? "1px solid #D3D1C7" : undefined,
-                  borderBottom: !isLastRowMobile ? "1px solid #D3D1C7" : undefined,
-                }}
-                data-last={isLast}
-                data-last-row={isLastRowMobile}
               >
                 <div
                   className="font-serif"
@@ -168,8 +159,7 @@ function Index() {
                   {s.label}
                 </div>
               </div>
-            );
-          })}
+          ))}
         </div>
       </section>
 
