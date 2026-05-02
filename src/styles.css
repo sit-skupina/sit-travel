@@ -170,3 +170,21 @@
   opacity: 0;
   animation: hero-fade 21s linear infinite;
 }
+
+/* Stats bar borders */
+@media (min-width: 768px) {
+  .stats-item {
+    border-right: 1px solid #D3D1C7;
+  }
+  .stats-item:last-child {
+    border-right: none;
+  }
+}
+@media (max-width: 767px) {
+  .stats-item {
+    border-bottom: 1px solid #D3D1C7;
+  }
+  .stats-item:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+}
