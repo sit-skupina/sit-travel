@@ -136,10 +136,10 @@ function Index() {
                 className="stats-item flex flex-col items-center justify-center text-center px-5 py-5 md:py-0"
               >
                 <div
-                  className="font-serif"
                   style={{
+                    fontFamily: "var(--font-sans)",
                     fontSize: "36px",
-                    fontWeight: 700,
+                    fontWeight: 600,
                     color: "#2C2C2A",
                     lineHeight: 1.1,
                   }}
