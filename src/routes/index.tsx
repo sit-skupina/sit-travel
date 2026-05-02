@@ -11,6 +11,7 @@ import ecHarris from "@/assets/clients/ec-harris.png";
 import fourFin from "@/assets/clients/4fin.png";
 import alfasigma from "@/assets/clients/alfasigma.png";
 import coloplast from "@/assets/clients/coloplast.png";
+import heroBg from "@/assets/hero-bg.webp";
 
 const clientLogos = [
   { src: penta, alt: "Penta" },
@@ -48,10 +49,7 @@ function Index() {
       <section className="relative -mt-[60px] flex min-h-[640px] items-center md:-mt-[72px] md:min-h-[720px]">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=2000&q=80')",
-          }}
+          style={{ backgroundImage: `url(${heroBg})` }}
           aria-hidden
         />
         <div className="absolute inset-0 bg-[var(--color-overlay)]" aria-hidden />
