@@ -227,6 +227,85 @@ function Index() {
         </div>
       </section>
 
+      {/* Services */}
+      <section className="services-section bg-white">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2
+              className="font-serif"
+              style={{ fontSize: "40px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.2 }}
+            >
+              Co pro Vás zajistíme
+            </h2>
+            <p
+              className="mx-auto mt-5"
+              style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: "16px",
+                color: "#6B6A66",
+                maxWidth: "560px",
+                lineHeight: 1.65,
+              }}
+            >
+              Od motivačního zájezdu přes kongres až po každodenní správu firemních letenek.
+              Vyberte oblast, se kterou potřebujete pomoci.
+            </p>
+          </div>
+
+          <div
+            className="mt-14 grid gap-6"
+            style={{ gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}
+          >
+            {services.map(({ icon: Icon, title, description }) => (
+              <article key={title} className="service-card">
+                <div className="service-icon">
+                  <Icon size={24} color="#F5A623" strokeWidth={2} />
+                </div>
+                <h3
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "18px",
+                    fontWeight: 600,
+                    color: "#1A1A1A",
+                    marginTop: "20px",
+                  }}
+                >
+                  {title}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "14px",
+                    color: "#6B6A66",
+                    lineHeight: 1.65,
+                    marginTop: "12px",
+                    flex: 1,
+                  }}
+                >
+                  {description}
+                </p>
+                <a
+                  href="#"
+                  className="service-link"
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "14px",
+                    fontWeight: 600,
+                    color: "#F5A623",
+                    marginTop: "20px",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
+                  }}
+                >
+                  Zjistit více <ArrowRight size={16} />
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <footer className="bg-[oklch(0.18_0.005_60)] py-10 text-center text-sm text-white/60">
         © 2026 SIT Travel · Všechna práva vyhrazena
       </footer>
