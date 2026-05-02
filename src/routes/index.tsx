@@ -102,13 +102,17 @@ function Index() {
             >
               <div className="flex w-max animate-marquee items-center gap-14">
                 {[...clientLogos, ...clientLogos].map((logo, i) => (
-                  <img
+                  <div
                     key={`${logo.alt}-${i}`}
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="h-10 w-auto shrink-0 object-contain opacity-90 brightness-0 invert md:h-12"
-                    loading="lazy"
-                  />
+                    className="flex h-10 w-[140px] shrink-0 items-center justify-center md:h-12 md:w-[160px]"
+                  >
+                    <img
+                      src={logo.src}
+                      alt={logo.alt}
+                      className="max-h-full max-w-full object-contain opacity-90 brightness-0 invert"
+                      loading="lazy"
+                    />
+                  </div>
                 ))}
               </div>
             </div>
