@@ -188,3 +188,43 @@
     border-bottom: none;
   }
 }
+
+/* Services section */
+.services-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+@media (max-width: 767px) {
+  .services-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid #D3D1C7;
+  border-radius: 12px;
+  padding: 32px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.service-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.09);
+  transform: translateY(-2px);
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FEF3DC;
+  border-radius: 8px;
+}
+
+.service-link:hover {
+  text-decoration: underline;
+}

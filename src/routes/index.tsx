@@ -1,6 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
+import {
+  Plane,
+  Presentation,
+  Building2,
+  Landmark,
+  Briefcase,
+  Star,
+  Trophy,
+  ArrowRight,
+  type LucideIcon,
+} from "lucide-react";
 import penta from "@/assets/clients/penta.png";
 import eucLekarna from "@/assets/clients/euc-lekarna.png";
 import direct from "@/assets/clients/direct.png";
@@ -26,6 +37,55 @@ const clientLogos = [
   { src: fourFin, alt: "4fin" },
   { src: alfasigma, alt: "Alfasigma" },
   { src: coloplast, alt: "Coloplast" },
+];
+
+const services: {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}[] = [
+  {
+    icon: Plane,
+    title: "Incentivní zájezdy",
+    description:
+      "Originální programy pro zaměstnance, management a obchodní partnery. Whistler, Ngorongoro, Dolomity — destinace volíme podle povahy Vašeho týmu.",
+  },
+  {
+    icon: Presentation,
+    title: "Kongresová turistika",
+    description:
+      "Vstup na kongresy a semináře po celém světě. Přihláška, letenka, transfer, hotel, víza — vše od jednoho dodavatele.",
+  },
+  {
+    icon: Building2,
+    title: "Kongresy a konference v ČR",
+    description:
+      "Příprava a organizace kongresů, konferencí a společenských akcí v ČR a na Slovensku. Řešení na klíč včetně online registrace.",
+  },
+  {
+    icon: Landmark,
+    title: "Incoming",
+    description:
+      "Poznávací pobyty v ČR pro zahraniční firemní klienty. Průvodci ve všech jazycích, kulturní program, transport na míru.",
+  },
+  {
+    icon: Briefcase,
+    title: "Služební cesty",
+    description:
+      "Letenky za nejlepší tarify, ubytování, transfery, pojištění. Naši lidé jsou Vám k dispozici i mimo standardní pracovní dobu.",
+  },
+  {
+    icon: Star,
+    title: "Privátní servis",
+    description:
+      "F1, Wimbledon, British Open — přímo u akce. Privátní jet, VIP ubytování, osobní poradce. Pro ty, kteří nechtějí kompromisy.",
+  },
+  {
+    icon: Trophy,
+    title: "Sport Travel",
+    description:
+      "Cesty za sportovními událostmi pro firmy i jednotlivce. Světové maratony, hokej, tenis, fotbal. Registrace, doprava, ubytování vyřešeno.",
+  },
 ];
 
 export const Route = createFileRoute("/")({
@@ -164,6 +224,85 @@ function Index() {
                 </div>
               </div>
           ))}
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="services-section bg-white">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2
+              className="font-serif"
+              style={{ fontSize: "40px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.2 }}
+            >
+              Co pro Vás zajistíme
+            </h2>
+            <p
+              className="mx-auto mt-5"
+              style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: "16px",
+                color: "#6B6A66",
+                maxWidth: "560px",
+                lineHeight: 1.65,
+              }}
+            >
+              Od motivačního zájezdu přes kongres až po každodenní správu firemních letenek.
+              Vyberte oblast, se kterou potřebujete pomoci.
+            </p>
+          </div>
+
+          <div
+            className="mt-14 grid gap-6"
+            style={{ gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}
+          >
+            {services.map(({ icon: Icon, title, description }) => (
+              <article key={title} className="service-card">
+                <div className="service-icon">
+                  <Icon size={24} color="#F5A623" strokeWidth={2} />
+                </div>
+                <h3
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "18px",
+                    fontWeight: 600,
+                    color: "#1A1A1A",
+                    marginTop: "20px",
+                  }}
+                >
+                  {title}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "14px",
+                    color: "#6B6A66",
+                    lineHeight: 1.65,
+                    marginTop: "12px",
+                    flex: 1,
+                  }}
+                >
+                  {description}
+                </p>
+                <a
+                  href="#"
+                  className="service-link"
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "14px",
+                    fontWeight: 600,
+                    color: "#F5A623",
+                    marginTop: "20px",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
+                  }}
+                >
+                  Zjistit více <ArrowRight size={16} />
+                </a>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
