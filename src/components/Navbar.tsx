@@ -29,7 +29,7 @@ export function Navbar({ transparentOnTop = true }: { transparentOnTop?: boolean
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-colors duration-200",
+        "fixed top-0 left-0 right-0 z-50 w-full transition-colors duration-200",
         solid
           ? "bg-background/95 backdrop-blur border-b border-border"
           : "bg-transparent border-b border-transparent",
