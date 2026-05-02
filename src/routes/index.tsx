@@ -1,6 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
+import {
+  Plane,
+  Presentation,
+  Building2,
+  Landmark,
+  Briefcase,
+  Star,
+  Trophy,
+  ArrowRight,
+  type LucideIcon,
+} from "lucide-react";
 import penta from "@/assets/clients/penta.png";
 import eucLekarna from "@/assets/clients/euc-lekarna.png";
 import direct from "@/assets/clients/direct.png";
@@ -26,6 +37,55 @@ const clientLogos = [
   { src: fourFin, alt: "4fin" },
   { src: alfasigma, alt: "Alfasigma" },
   { src: coloplast, alt: "Coloplast" },
+];
+
+const services: {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}[] = [
+  {
+    icon: Plane,
+    title: "Incentivní zájezdy",
+    description:
+      "Originální programy pro zaměstnance, management a obchodní partnery. Whistler, Ngorongoro, Dolomity — destinace volíme podle povahy Vašeho týmu.",
+  },
+  {
+    icon: Presentation,
+    title: "Kongresová turistika",
+    description:
+      "Vstup na kongresy a semináře po celém světě. Přihláška, letenka, transfer, hotel, víza — vše od jednoho dodavatele.",
+  },
+  {
+    icon: Building2,
+    title: "Kongresy a konference v ČR",
+    description:
+      "Příprava a organizace kongresů, konferencí a společenských akcí v ČR a na Slovensku. Řešení na klíč včetně online registrace.",
+  },
+  {
+    icon: Landmark,
+    title: "Incoming",
+    description:
+      "Poznávací pobyty v ČR pro zahraniční firemní klienty. Průvodci ve všech jazycích, kulturní program, transport na míru.",
+  },
+  {
+    icon: Briefcase,
+    title: "Služební cesty",
+    description:
+      "Letenky za nejlepší tarify, ubytování, transfery, pojištění. Naši lidé jsou Vám k dispozici i mimo standardní pracovní dobu.",
+  },
+  {
+    icon: Star,
+    title: "Privátní servis",
+    description:
+      "F1, Wimbledon, British Open — přímo u akce. Privátní jet, VIP ubytování, osobní poradce. Pro ty, kteří nechtějí kompromisy.",
+  },
+  {
+    icon: Trophy,
+    title: "Sport Travel",
+    description:
+      "Cesty za sportovními událostmi pro firmy i jednotlivce. Světové maratony, hokej, tenis, fotbal. Registrace, doprava, ubytování vyřešeno.",
+  },
 ];
 
 export const Route = createFileRoute("/")({
