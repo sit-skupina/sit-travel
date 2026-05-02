@@ -48,7 +48,7 @@ function Index() {
       <Navbar transparentOnTop />
 
       {/* Hero */}
-      <section className="relative -mt-[60px] flex min-h-[640px] items-center overflow-hidden md:-mt-[72px] md:min-h-[720px]">
+      <section className="relative flex min-h-[640px] items-center overflow-hidden md:min-h-[720px]">
         <div className="absolute inset-0" aria-hidden>
           {[heroBg, heroBg2, heroBg3].map((src, i) => (
             <div
