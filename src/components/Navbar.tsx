@@ -3,7 +3,8 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/sittravel-logo.png";
+import logoDark from "@/assets/sittravel-logo.png";
+import logoWhite from "@/assets/sittravel-logo-white.png";
 
 const NAV_ITEMS = [
   { to: "/", label: "O nás" },
@@ -35,8 +36,24 @@ export function Navbar({ transparentOnTop = true }: { transparentOnTop?: boolean
       )}
     >
       <div className="mx-auto flex h-[60px] max-w-7xl items-center justify-between px-5 md:h-[72px] md:px-8">
-        <Link to="/" className="flex items-center" aria-label="SIT Travel">
-          <img src={logo} alt="SIT Travel" className="h-8 w-auto md:h-9" />
+        <Link to="/" className="relative flex items-center" aria-label="SIT Travel">
+          <img
+            src={logoWhite}
+            alt="SIT Travel"
+            className={cn(
+              "h-8 w-auto transition-opacity duration-300 md:h-9",
+              solid ? "opacity-0" : "opacity-100",
+            )}
+          />
+          <img
+            src={logoDark}
+            alt=""
+            aria-hidden="true"
+            className={cn(
+              "absolute inset-0 h-8 w-auto transition-opacity duration-300 md:h-9",
+              solid ? "opacity-100" : "opacity-0",
+            )}
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
