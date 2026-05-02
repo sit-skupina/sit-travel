@@ -140,7 +140,7 @@ function Index() {
                   style={{
                     fontSize: "36px",
                     fontWeight: 700,
-                    color: "#F5A623",
+                    color: "#2C2C2A",
                     lineHeight: 1.1,
                   }}
                 >
