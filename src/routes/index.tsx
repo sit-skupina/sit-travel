@@ -12,6 +12,8 @@ import fourFin from "@/assets/clients/4fin.png";
 import alfasigma from "@/assets/clients/alfasigma.png";
 import coloplast from "@/assets/clients/coloplast.png";
 import heroBg from "@/assets/hero-bg.webp";
+import heroBg2 from "@/assets/hero-bg-2.webp";
+import heroBg3 from "@/assets/hero-bg-3.webp";
 
 const clientLogos = [
   { src: penta, alt: "Penta" },
@@ -46,15 +48,22 @@ function Index() {
       <Navbar transparentOnTop />
 
       {/* Hero */}
-      <section className="relative -mt-[60px] flex min-h-[640px] items-center md:-mt-[72px] md:min-h-[720px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroBg})` }}
-          aria-hidden
-        />
-        <div className="absolute inset-0 bg-[var(--color-overlay)]" aria-hidden />
+      <section className="relative -mt-[60px] flex min-h-[640px] items-center overflow-hidden md:-mt-[72px] md:min-h-[720px]">
+        <div className="absolute inset-0" aria-hidden>
+          {[heroBg, heroBg2, heroBg3].map((src, i) => (
+            <div
+              key={i}
+              className="absolute inset-0 bg-cover bg-center animate-hero-fade"
+              style={{
+                backgroundImage: `url(${src})`,
+                animationDelay: `${i * 7}s`,
+              }}
+            />
+          ))}
+        </div>
+        <div className="absolute inset-0 bg-black/[0.52]" aria-hidden />
 
-        <div className="relative mx-auto flex w-full max-w-7xl flex-col px-5 pt-32 pb-12 md:px-8 md:pt-40 md:pb-16">
+        <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col px-5 pt-32 pb-12 md:px-8 md:pt-40 md:pb-16">
           <span className="inline-block text-xs font-medium uppercase tracking-[0.18em] text-white/85">
             Firemní cestovní kancelář · Praha · Od roku 1991
           </span>
