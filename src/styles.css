@@ -1103,7 +1103,7 @@ html {
 .reference-section {
   content-visibility: auto;
   contain-intrinsic-size: 0 500px;
-  background: #FFFFFF;
+  background: #F7F5F0;
   padding: 100px 0 80px;
   border-top: 1px solid #D3D1C7;
 }
@@ -1140,7 +1140,7 @@ html {
 }
 
 .reference-logo-cell {
-  background: #F7F5F0;
+  background: #FFFFFF;
   border: 1px solid #D3D1C7;
   border-radius: 12px;
   padding: 28px 20px;
