@@ -1195,7 +1195,7 @@ html {
 .faq-section {
   content-visibility: auto;
   contain-intrinsic-size: 0 700px;
-  background: #F7F5F0;
+  background: #FFFFFF;
   border-top: 1px solid #D3D1C7;
   padding: 100px 0 80px;
 }
@@ -1227,14 +1227,14 @@ html {
 .faq-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0;
 }
 
 .faq-item {
-  background: #FFFFFF;
-  border: 1px solid #E5E3DA;
-  border-radius: 12px;
-  padding: 0 24px;
+  border-bottom: 1px solid #D3D1C7;
+}
+.faq-item:first-child {
+  border-top: 1px solid #D3D1C7;
 }
 
 .faq-question {
