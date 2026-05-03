@@ -29,35 +29,40 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SIT Travel - B2B cestovní kancelář pro firmy" },
+      { name: "theme-color", content: "#C9530E" },
+      { title: "SIT Travel — B2B cestovní kancelář pro firmy" },
       {
         name: "description",
         content:
-          "Prémiová B2B cestovní kancelář s 35 lety zkušeností. Incentivní zájezdy, kongresy a služební cesty pro firemní klientelu.",
+          "Prémiová B2B cestovní kancelář s 35 lety zkušeností. Incentivní zájezdy, kongresy a služební cesty pro firemní klientelu. Akreditovaný agent IATA, člen ACK ČR.",
       },
-      { name: "author", content: "SIT Travel" },
-      { property: "og:title", content: "SIT Travel - B2B cestovní kancelář pro firmy" },
+      { name: "author", content: "SIT Travel s.r.o." },
+      { property: "og:title", content: "SIT Travel — B2B cestovní kancelář pro firmy" },
       {
         property: "og:description",
         content:
-          "Incentivní zájezdy, kongresy a služební cesty. Akreditovaný agent IATA, člen ACK ČR.",
+          "Incentivní zájezdy, kongresy a služební cesty. Akreditovaný agent IATA, člen ACK ČR. Na trhu od roku 1991.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "SIT Travel - B2B cestovní kancelář pro firmy" },
-      { name: "description", content: "SitTravel Brandsite is a corporate travel agency website showcasing event planning services." },
-      { property: "og:description", content: "SitTravel Brandsite is a corporate travel agency website showcasing event planning services." },
-      { name: "twitter:description", content: "SitTravel Brandsite is a corporate travel agency website showcasing event planning services." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/ypS9RaVyxCStGNf1td7aGxe0KSg1/social-images/social-1777730200004-1background_(1).webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/ypS9RaVyxCStGNf1td7aGxe0KSg1/social-images/social-1777730200004-1background_(1).webp" },
+      { property: "og:locale", content: "cs_CZ" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "SIT Travel — B2B cestovní kancelář pro firmy" },
+      {
+        name: "twitter:description",
+        content: "Incentivní zájezdy, kongresy a služební cesty. 35 let zkušeností.",
+      },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
+        rel: "preload",
+        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap",
+        as: "style",
+      },
+      {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap",
       },
       {
         rel: "stylesheet",
@@ -72,7 +77,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="cs">
       <head>
         <HeadContent />
       </head>

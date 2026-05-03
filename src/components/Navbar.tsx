@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -7,10 +6,12 @@ import logoDark from "@/assets/sittravel-logo.png";
 import logoWhite from "@/assets/sittravel-logo-white.png";
 
 const NAV_ITEMS = [
-  { to: "/", label: "O nás" },
-  { to: "/", label: "Služby" },
-  { to: "/", label: "Reference" },
-  { to: "/", label: "Kontakt" },
+  { href: "#sluzby", label: "Služby" },
+  { href: "#jak-to-funguje", label: "Jak to funguje" },
+  { href: "#o-nas", label: "O nás" },
+  { href: "#reference", label: "Reference" },
+  { href: "#faq", label: "FAQ" },
+  { href: "#kontakt", label: "Kontakt" },
 ];
 
 export function Navbar({ transparentOnTop = true }: { transparentOnTop?: boolean }) {
@@ -36,7 +37,7 @@ export function Navbar({ transparentOnTop = true }: { transparentOnTop?: boolean
       )}
     >
       <div className="mx-auto flex h-[60px] max-w-7xl items-center justify-between px-5 md:h-[72px] md:px-8">
-        <Link to="/" className="relative flex items-center" aria-label="SIT Travel">
+        <a href="/" className="relative flex items-center" aria-label="SIT Travel">
           <img
             src={logoWhite}
             alt="SIT Travel"
@@ -54,23 +55,23 @@ export function Navbar({ transparentOnTop = true }: { transparentOnTop?: boolean
               solid ? "opacity-100" : "opacity-0",
             )}
           />
-        </Link>
+        </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 md:flex">
           {NAV_ITEMS.map((item) => (
-            <Link
+            <a
               key={item.label}
-              to={item.to}
+              href={item.href}
               className={cn(
                 "text-[15px] font-medium tracking-wide transition-colors hover:text-primary",
                 solid ? "text-foreground" : "text-white",
               )}
             >
               {item.label}
-            </Link>
+            </a>
           ))}
-          <Button variant="primary" size="cta">
-            Poptejte akci
+          <Button variant="primary" size="cta" asChild>
+            <a href="#kontakt">Poptejte akci</a>
           </Button>
         </nav>
 
@@ -92,17 +93,17 @@ export function Navbar({ transparentOnTop = true }: { transparentOnTop?: boolean
         <div className="border-t border-border bg-background md:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-4">
             {NAV_ITEMS.map((item) => (
-              <Link
+              <a
                 key={item.label}
-                to={item.to}
+                href={item.href}
                 onClick={() => setOpen(false)}
                 className="rounded-md px-3 py-3 text-[15px] font-medium text-foreground transition-colors hover:bg-secondary hover:text-primary"
               >
                 {item.label}
-              </Link>
+              </a>
             ))}
-            <Button variant="primary" size="cta" className="mt-3 w-full">
-              Poptejte akci
+            <Button variant="primary" size="cta" className="mt-3 w-full" asChild>
+              <a href="#kontakt" onClick={() => setOpen(false)}>Poptejte akci</a>
             </Button>
           </nav>
         </div>
