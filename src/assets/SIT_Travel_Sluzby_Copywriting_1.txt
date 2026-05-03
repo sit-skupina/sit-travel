@@ -1,0 +1,438 @@
+SIT TRAVEL — COPYWRITING PODSTRÁNEK SLUŽEB
+Reference pro Claude Code
+===========================================
+
+
+===========================================
+1. INCENTIVNÍ ZÁJEZDY
+URL: /sluzby/incentivni-zajezdy
+===========================================
+
+HERO SEKCE
+----------
+Eyebrow: Incentivní zájezdy
+H1: Zážitky, které Váš tým ještě dlouho nepřestane chválit.
+Subheadline: Originální programy pro zaměstnance, management a obchodní partnery. Vybíráme destinaci, připravíme program, předložíme vyúčtování. Stačí jedno rozhodnutí.
+CTA: Poptejte program
+
+ÚVODNÍ SEKCE — PEREX
+---------------------
+H2: Nápad nestačí. Záleží na provedení.
+Body: Ani dobrý nápad nezaručí dobrý výsledek. Proto přicházíme s originálními nápady — takovými, které Vám zajistí náskok před ostatními. Ve spojení s důrazem na každý detail přinášejí jistý úspěch.
+
+Toužíte po lyžování v kanadském Whistleru? Láká Vás nedotčená Afrika v rezervaci Ngorongoro? Chcete prohánět divoké hřebce sportovního Ferrari v italských Dolomitech? Adrenalin, wellness, kultura nebo sport — ušijeme program na míru s ohledem na osobnost a povahu Vašeho týmu.
+
+CO ZAJISTÍME — 3 SLOUPCE (ikona + název + popis)
+-------------------------------------------------
+Sloupec 1:
+Ikona: Globe
+Název: Výběr destinace
+Popis: Navrhujeme destinaci podle charakteru skupiny, ročního období a cíle akce. Máme zkušenosti s Evropou i vzdálenými destinacemi.
+
+Sloupec 2:
+Ikona: Presentation
+Název: Program na míru
+Popis: Připravíme kompletní program — od příletu po odlet. Adrenalinové aktivity, wellness, kulturní program nebo kombinace.
+
+Sloupec 3:
+Ikona: FileText
+Název: Vyúčtování a fotodokumentace
+Popis: Po skončení akce obdržíte přehledné vyúčtování, fotodokumentaci a vyhodnocení celé akce.
+
+PRO KOHO SEKCE — 3 KARTY
+-------------------------
+Karta 1:
+Název: Zaměstnanci
+Popis: Motivační akce pro celý tým. Teambuilding, který skutečně stmelí kolektiv.
+
+Karta 2:
+Název: Management
+Popis: Exkluzivní programy pro vedení firmy. Kombinace obchodního jednání a prémiových zážitků.
+
+Karta 3:
+Název: Obchodní partneři
+Popis: Poděkování klíčovým partnerům formou nezapomenutelného výjezdu. Nejlepší investice do vztahu.
+
+CTA SEKCE
+---------
+H2: Řekněte nám, co plánujete.
+Subheadline: Konkrétní návrh destinace a programu do 48 hodin.
+CTA tlačítko: Poptejte incentivní zájezd
+
+KONTAKT DOLE
+------------
+Text: Máte otázku ještě před poptávkou?
+Telefon: +420 241 441 147
+Email: sit@sittravel.cz
+
+
+===========================================
+2. PRIVÁTNÍ SERVIS
+URL: /sluzby/privatni-servis
+===========================================
+
+HERO SEKCE
+----------
+Eyebrow: Privátní servis
+H1: Přímo u akce. Ne před obrazovkou.
+Subheadline: F1, Wimbledon, British Open — v těsné blízkosti sportovních velikánů. Privátní jet, VIP ubytování, osobní poradce. Pro ty, kteří nechtějí kompromisy.
+CTA: Nezávazná poptávka
+
+ÚVODNÍ SEKCE — PEREX
+---------------------
+H2: Přímé přenosy nikdy nenahradí osobní přítomnost.
+Body: Přímé přenosy z F1, Wimbledonu nebo British Open nikdy nebudou mít takovou atmosféru, jako když je navštívíte osobně. Zajistíme Vám místo v těsné blízkosti sportovních velikánů či filmových celebrit.
+
+Kompletní servis zahrnuje letenky, transfery, luxusní ubytování, vstupenky do centra dění a bohatý doprovodný program. Za idoly Vás navíc můžeme dostat tou nejrychlejší a nejkomfortnější cestou — privátním jetem.
+
+CO ZAJISTÍME — 4 SLOUPCE
+-------------------------
+Sloupec 1:
+Ikona: Plane
+Název: Privátní jet
+Popis: Ideální pro 4 až 16 osob. Žádná přeplněná letiště, žádné přestupy. Odlétáte kdy Vy chcete.
+
+Sloupec 2:
+Ikona: Star
+Název: VIP vstupenky
+Popis: Místa v těsné blízkosti dění — ne jen v hledišti. Hospitality zóny, pit lane, backstage.
+
+Sloupec 3:
+Ikona: Building2
+Název: Luxusní ubytování
+Popis: Hotely nejvyšší kategorie v nejlepší dostupné lokalitě k události.
+
+Sloupec 4:
+Ikona: User
+Název: Osobní poradce
+Popis: Váš poradce je k dispozici po celou dobu akce. Na osobní jednání klademe nejvyšší důraz.
+
+UDÁLOSTI — PŘÍKLADY
+--------------------
+H2: Akce, které zajišťujeme
+(grid karet nebo prostý seznam s fotkami)
+- Formule 1 — Grand Prix po celém světě
+- Wimbledon — tenisový grandslam v Londýně
+- British Open — golf nejvyšší úrovně
+- Masters Augusta — nejprestižnější golfový turnaj světa
+- Champions League Final
+- Super Bowl
+- Filmové festivaly (Cannes, Benátky)
+
+CTA SEKCE
+---------
+H2: Nespokojte se s méně.
+Subheadline: Popište nám Váš požadavek. Zbytek je na nás.
+CTA tlačítko: Poptejte privátní servis
+
+KONTAKT DOLE
+------------
+Text: Preferujete přímý kontakt?
+Telefon: +420 241 441 147
+Email: sit@sittravel.cz
+
+
+===========================================
+3. KONGRESOVÁ TURISTIKA
+URL: /sluzby/kongresova-turistika
+===========================================
+
+HERO SEKCE
+----------
+Eyebrow: Kongresová turistika
+H1: Kongresy a semináře po celém světě. Od přihlášky po zpáteční letenku.
+Subheadline: Zajistíme Vám vstup na vybraný kongres nebo seminář kdekoliv na světě. Registrace, letenky, transfery, ubytování, víza — vše od jednoho dodavatele.
+CTA: Poptejte kongres
+
+ÚVODNÍ SEKCE — PEREX
+---------------------
+H2: Spojte příjemné s užitečným.
+Body: Víte o kongresu nebo semináři, kterého byste se Vy nebo Vaši kolegové chtěli zúčastnit? Zajistíme Vám kompletní servis — od registrace a úhrady účastnických poplatků po zpáteční cestu.
+
+Najdeme pro Vás nejvhodnější a nejrychlejší letecké spojení, zajistíme veškeré transfery a pečlivě se postaráme o Váš klidný spánek. Předem zjistíme vízové podmínky a v případě potřeby příslušné dokumenty zajistíme.
+
+CO ZAHRNUJE SERVIS — 3 SLOUPCE
+--------------------------------
+Sloupec 1:
+Ikona: ClipboardCheck
+Název: Registrace a poplatky
+Popis: Vyplnění přihlášky, úhrada účastnických poplatků, potvrzení účasti. Vše vyřídíme za Vás.
+
+Sloupec 2:
+Ikona: Plane
+Název: Doprava a transfery
+Popis: Nejrychlejší letecké spojení za nejlepší cenu. Transfery z letiště na místo konání a zpět.
+
+Sloupec 3:
+Ikona: BedDouble
+Název: Ubytování a volný čas
+Popis: Hotel v optimální lokalitě. Na přání doplníme o aktivity pro volný čas — golf, kolo, kulturní program.
+
+CTA SEKCE
+---------
+H2: Víte o kongresu, kterého se chcete zúčastnit?
+Subheadline: Napište nám název a termín. Zbytek vyřídíme my.
+CTA tlačítko: Poptejte kongresový servis
+
+KONTAKT DOLE
+------------
+Text: Máte otázku?
+Telefon: +420 241 441 147
+Email: sit@sittravel.cz
+
+
+===========================================
+4. INCOMING — ČESKÁ REPUBLIKA
+URL: /sluzby/incoming-ceska-republika
+===========================================
+
+HERO SEKCE
+----------
+Eyebrow: Incoming
+H1: To nejlepší z České republiky. Pro Vaše zahraniční hosty.
+Subheadline: Organizujeme poznávací pobyty v ČR pro zahraniční firemní klienty. Licencovaní průvodci ve všech jazycích, doprava, vstupenky, kulturní program na míru.
+CTA: Poptejte program
+
+ÚVODNÍ SEKCE — PEREX
+---------------------
+H2: Česká republika očima profesionála.
+Body: Jsme DMC se sídlem v Praze s zkušenostmi od roku 1991. Navrhujeme, připravujeme a realizujeme programy pro zahraniční firemní skupiny i individuální klienty v Praze, České republice a střední Evropě.
+
+Každý projekt je šitý na míru — s ohledem na Vaše potřeby, složení skupiny a cíl návštěvy.
+
+CO ZAJISTÍME — 2 sloupce (seznam s ikonami)
+--------------------------------------------
+Levý sloupec:
+- Poradenství při výběru destinace a programu
+- Licencovaní průvodci ve všech jazycích
+- Doprava všeho druhu — od koňského spřežení po limuzínu
+- Vstupenky na kulturní, společenské a sportovní akce
+
+Pravý sloupec:
+- Ubytování v hotelech všech kategorií
+- Gastronomické zážitky a cateringové služby
+- Teambuilding a sportovní program
+- Site inspections s naším projektovým manažerem
+
+DESTINACE — SEKCE S FOTOGRAFIEMI
+---------------------------------
+H2: Kde Vás provedeme
+(grid fotek s popisky)
+- Praha — historické centrum, UNESCO, architektura
+- Český Krumlov — nejkrásnější město jižních Čech
+- Karlovy Vary — lázeňské město s tradicí
+- Česká Švýcarsko — unikátní přírodní scenérie
+- Moravské vinařské oblasti — víno a tradice
+
+KONTAKTY PRO INCOMING
+---------------------
+H2: Kontaktujte náš incoming tým
+Email: incoming@sittravel.cz
+GSM: +420 777 858 524
+
+CTA SEKCE
+---------
+H2: Plánujete příjezd zahraniční skupiny?
+Subheadline: Napište nám počet osob, termín a zájem skupiny. Návrh programu do 48 hodin.
+CTA tlačítko: Poptejte incoming program
+
+KONTAKT DOLE
+------------
+Telefon: +420 241 441 147
+Email: incoming@sittravel.cz
+GSM: +420 777 858 524
+
+
+===========================================
+5. SLUŽEBNÍ CESTY
+URL: /sluzby/sluzebni-cesty
+===========================================
+
+HERO SEKCE
+----------
+Eyebrow: Služební cesty
+H1: Vaše firemní cestování. Náš problém.
+Subheadline: Letenky za nejlepší dostupné tarify, ubytování, transfery, pojištění a půjčení vozu — vše od jednoho dodavatele. Naši specialisté jsou k dispozici i mimo pracovní dobu.
+CTA: Poptejte servis
+
+ÚVODNÍ SEKCE — PEREX
+---------------------
+H2: Kompletní agenda služebních cest v jedněch rukou.
+Body: Specialisté z oddělení korporátních klientů zajistí kompletní agendu Vašich služebních cest. Chápeme potřebu úspory času a nákladů — proto vždy nabízíme optimální spojení za nejvýhodnější tarify.
+
+Náš tým tvoří specialisté s praxí v oboru minimálně 5 let, kteří jsou pravidelně seznamováni se všemi novinkami a tarifními změnami. Jsme k dispozici i mimo standardní pracovní dobu.
+
+CO ZAJISTÍME — 3 SLOUPCE
+-------------------------
+Sloupec 1:
+Ikona: Plane
+Název: Letenky
+Popis: Optimální letecké spojení za nejlepší dostupné tarify. Economy, business i first class. Online rezervační systém dostupný 24 hodin denně.
+
+Sloupec 2:
+Ikona: BedDouble
+Název: Ubytování a transfery
+Popis: Hotely ve všech destinacích, transfery z letiště. Vždy s ohledem na Váš rozpočet a preference.
+
+Sloupec 3:
+Ikona: Shield
+Název: Pojištění a víza
+Popis: Cestovní pojištění, vízová agenda, předem zjišťujeme podmínky vstupu do každé destinace.
+
+PROČ SIT TRAVEL SEKCE — 3 BODY
+--------------------------------
+Bod 1: Tým specialistů s min. 5 lety praxe v oboru
+Bod 2: Dostupnost i mimo standardní pracovní dobu
+Bod 3: Online rezervační systém 24/7
+
+CTA SEKCE
+---------
+H2: Svěřte cestovní agendu profesionálům.
+Subheadline: Více než 30 let zkušeností s firemním cestováním.
+CTA primární: Poptejte servis
+CTA sekundární (odkaz): Online letenky → (href: https://sittravel-s2.symphony.cz/cs/index.php)
+
+KONTAKT DOLE
+------------
+Text: Potřebujete poradit se s výběrem tarifu?
+Telefon: +420 241 441 147
+Email: sit@sittravel.cz
+
+
+===========================================
+6. KONGRESY A KONFERENCE V ČR
+URL: /sluzby/kongresy-seminare-cr
+===========================================
+
+HERO SEKCE
+----------
+Eyebrow: Kongresy a konference v ČR
+H1: Organizace kongresů a firemních akcí v České republice na klíč.
+Subheadline: Poskytujeme kompletní řešení pro přípravu a realizaci kongresů, konferencí a společenských akcí v ČR a na Slovensku. Jedno rozhodnutí, jedna schůzka — zbytek je na nás.
+CTA: Poptejte organizaci
+
+ÚVODNÍ SEKCE — PEREX
+---------------------
+H2: Od rozhodnutí po závěrečné tleskaní.
+Body: Poskytujeme profesionální řešení pro přípravu a organizaci kongresů, konferencí a společenských akcí v České republice a na Slovensku. Nabízíme kompletní řešení na klíč včetně doprovodných služeb.
+
+Zajistíme online registraci účastníků včetně mobilní aplikace. Postaráme se o všechny technické, logistické i gastronomické detaily.
+
+CO ZAHRNUJE KOMPLETNÍ SERVIS — 2 SLOUPCE
+------------------------------------------
+Levý sloupec:
+- Výběr a rezervace vhodného místa konání
+- Online registrace účastníků včetně mobilní aplikace
+- Technické zajištění (ozvučení, projekce, simultánní tlumočení)
+- Catering a gastronomické služby
+
+Pravý sloupec:
+- Transfery a doprava účastníků
+- Galavečeře a společenský program
+- Průvodcovské služby
+- Přehledné vyúčtování po skončení akce
+
+TYPY AKCÍ — KARTY
+------------------
+Karta 1:
+Ikona: Users
+Název: Kongresy a konference
+Popis: Odborné akce pro desítky až stovky účastníků. Kompletní organizace včetně registrace.
+
+Karta 2:
+Ikona: Presentation
+Název: Firemní semináře
+Popis: Vzdělávací a interní akce pro zaměstnance. Zajistíme místo, catering i program.
+
+Karta 3:
+Ikona: Music
+Název: Společenské akce
+Popis: Galavečeře, firemní večírky, výroční akce. Organizace s důrazem na každý detail.
+
+CTA SEKCE
+---------
+H2: Plánujete kongres nebo firemní akci?
+Subheadline: Stačí jedna schůzka. Připravíme kompletní nabídku.
+CTA tlačítko: Poptejte organizaci akce
+
+KONTAKT DOLE
+------------
+Text: Rádi s Vámi probereme Vaše požadavky osobně.
+Telefon: +420 241 441 147
+Email: sit@sittravel.cz
+
+
+===========================================
+7. SPORT TRAVEL
+URL: /sluzby/sport-travel
+===========================================
+
+HERO SEKCE
+----------
+Eyebrow: Sport Travel
+H1: Světové sportovní události na vlastní kůži.
+Subheadline: Cesty za sportovními událostmi pro firmy i jednotlivce. Světové maratony, zápasy a závody. Registrace, doprava i ubytování vyřešeno — Vy se soustředíte jen na výkon nebo zážitek.
+CTA: Poptejte cestu
+
+ÚVODNÍ SEKCE — PEREX
+---------------------
+H2: Sport travel s letitou tradicí.
+Body: Sport Travel má dlouholetou tradici a velké zkušenosti se zajištěním cest za sportovními událostmi po celém světě — pro firmy i skupiny, pro individuální klientelu.
+
+Cesta je vždy připravena s ohledem na Vaše časové možnosti a požadovaný rozpočet. Vy se soustředíte na sportovní zážitek nebo výkon — logistiku řešíme my.
+
+TYPY CEST — 2 SLOUPCE
+----------------------
+Levý sloupec — Jako divák:
+Ikona: Eye
+Název: Sportovní události jako divák
+Popis: Vstupenky, letenky, ubytování, transfery. Zajistíme místo co nejblíže dění.
+Příklady: Formule 1, fotbalové ligy, tenisové grandslamy, olympijské hry, hokejové MS
+
+Pravý sloupec — Jako účastník:
+Ikona: Trophy
+Název: Účast na světových maratonech
+Popis: Registrace na vybraný maraton, doprava, ubytování, doplňkový program. Soustřeďte se jen na výsledek.
+Příklady: New York Marathon, London Marathon, Berlin Marathon, Boston Marathon, Chicago Marathon, Tokyo Marathon
+
+CO ZAJISTÍME — SEZNAM S IKONAMI
+---------------------------------
+- Registrace na sportovní událost nebo závod
+- Letenky za nejlepší dostupné tarify
+- Ubytování v optimální lokalitě k události
+- Transfery z letiště a na místo konání
+- Vstupenky na tribunu nebo VIP zónu
+- Doplňkový kulturní a zábavní program
+
+CTA SEKCE
+---------
+H2: Jaká sportovní událost Vás láká?
+Subheadline: Napište nám termín a destinaci. Postaráme se o zbytek.
+CTA tlačítko: Poptejte Sport Travel
+
+KONTAKT DOLE
+------------
+Text: Potřebujete poradit s výběrem události nebo destinace?
+Telefon: +420 241 441 147
+Email: sit@sittravel.cz
+
+
+===========================================
+GLOBÁLNÍ PRVKY PRO VŠECHNY PODSTRÁNKY
+===========================================
+
+BREADCRUMB (nahoře pod navbarem):
+Domů > Služby > [Název služby]
+
+RELATED SERVICES (dole před CTA sekcí):
+H3: Mohlo by Vás zajímat
+Zobrazit 2-3 karty s odkazem na jiné služby (interní prolinkování)
+
+FOOTER:
+Shodný s homepage — 4 sloupce, seznam všech služeb, kontakt, SIT skupina.
+
+META TITLE FORMÁT:
+[Název služby] | SIT Travel
+
+META DESCRIPTION FORMÁT:
+[Konkrétní benefit]. SIT Travel zajišťuje [název služby] pro firemní klientelu od roku 1991. [Konkrétní výstup]. Poptejte nezávazně.

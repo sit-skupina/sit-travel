@@ -5,16 +5,20 @@ import { cn } from "@/lib/utils";
 import logoDark from "@/assets/sittravel-logo.png";
 import logoWhite from "@/assets/sittravel-logo-white.png";
 
-const NAV_ITEMS = [
-  { href: "#sluzby", label: "Služby" },
-  { href: "#jak-to-funguje", label: "Jak to funguje" },
-  { href: "#o-nas", label: "O nás" },
-  { href: "#reference", label: "Reference" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#kontakt", label: "Kontakt" },
+const NAV_ANCHORS = [
+  { anchor: "#sluzby", label: "Služby" },
+  { anchor: "#jak-to-funguje", label: "Jak to funguje" },
+  { anchor: "#o-nas", label: "O nás" },
+  { anchor: "#reference", label: "Reference" },
+  { anchor: "#faq", label: "FAQ" },
+  { anchor: "#kontakt", label: "Kontakt" },
 ];
 
-export function Navbar({ transparentOnTop = true }: { transparentOnTop?: boolean }) {
+export function Navbar({ transparentOnTop = true, subpage = false }: { transparentOnTop?: boolean; subpage?: boolean }) {
+  const navItems = NAV_ANCHORS.map(item => ({
+    href: subpage ? `/${item.anchor}` : item.anchor,
+    label: item.label,
+  }));
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -58,7 +62,7 @@ export function Navbar({ transparentOnTop = true }: { transparentOnTop?: boolean
         </a>
 
         <nav className="hidden items-center gap-6 md:flex">
-          {NAV_ITEMS.map((item) => (
+          {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
@@ -71,7 +75,7 @@ export function Navbar({ transparentOnTop = true }: { transparentOnTop?: boolean
             </a>
           ))}
           <Button variant="primary" size="cta" asChild>
-            <a href="#kontakt">Poptejte akci</a>
+            <a href={subpage ? "/#kontakt" : "#kontakt"}>Poptejte akci</a>
           </Button>
         </nav>
 
@@ -92,7 +96,7 @@ export function Navbar({ transparentOnTop = true }: { transparentOnTop?: boolean
       {open && (
         <div className="border-t border-border bg-background md:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-4">
-            {NAV_ITEMS.map((item) => (
+            {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
@@ -103,7 +107,7 @@ export function Navbar({ transparentOnTop = true }: { transparentOnTop?: boolean
               </a>
             ))}
             <Button variant="primary" size="cta" className="mt-3 w-full" asChild>
-              <a href="#kontakt" onClick={() => setOpen(false)}>Poptejte akci</a>
+              <a href={subpage ? "/#kontakt" : "#kontakt"} onClick={() => setOpen(false)}>Poptejte akci</a>
             </Button>
           </nav>
         </div>

@@ -50,36 +50,43 @@ const bentoCards = [
     img: imgIncentivni,
     headline: "Incentivní zájezdy",
     sub: "Originální programy pro zaměstnance, management a obchodní partnery.",
+    href: "/sluzby/incentivni-zajezdy",
   },
   {
     img: imgPrivatni,
     headline: "Privátní servis",
     sub: "F1, Wimbledon, privátní jet. Pro ty, kteří nechtějí kompromisy.",
+    href: "/sluzby/privatni-servis",
   },
   {
     img: imgKongresova,
     headline: "Kongresová turistika",
     sub: "Kongresy a semináře po celém světě.",
+    href: "/sluzby/kongresova-turistika",
   },
   {
     img: imgIncoming,
     headline: "Incoming",
     sub: "Poznávací pobyty v ČR pro zahraniční klienty.",
+    href: "/sluzby/incoming-ceska-republika",
   },
   {
     img: imgSluzebni,
     headline: "Služební cesty",
     sub: "Letenky, ubytování, transfery od jednoho dodavatele.",
+    href: "/sluzby/sluzebni-cesty",
   },
   {
     img: imgKongresy,
     headline: "Kongresy a konference v ČR",
     sub: "Organizace kongresů a společenských akcí na klíč.",
+    href: "/sluzby/kongresy-seminare-cr",
   },
   {
     img: imgSport,
     headline: "Sport Travel",
     sub: "Světové maratony, zápasy a závody. Registrace i ubytování.",
+    href: "/sluzby/sport-travel",
   },
 ];
 
@@ -325,15 +332,15 @@ function Index() {
 
           <div className="bento-grid">
             {bentoCards.map((card, i) => (
-              <div key={i} className={`bento-card bento-card--${i + 1}`}>
+              <a key={i} href={card.href} className={`bento-card bento-card--${i + 1}`}>
                 <img src={card.img} alt={card.headline} className="bento-card-img" loading="lazy" />
                 <div className="bento-card-overlay" aria-hidden />
                 <div className="bento-card-content">
                   <h3 className="bento-card-headline">{card.headline}</h3>
                   <p className="bento-card-sub">{card.sub}</p>
-                  <button className="bento-card-btn">Zjistit více</button>
+                  <span className="bento-card-btn">Zjistit více</span>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

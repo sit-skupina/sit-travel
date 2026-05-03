@@ -10,33 +10,131 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SluzbySportTravelRouteImport } from './routes/sluzby/sport-travel'
+import { Route as SluzbySluzebniCestyRouteImport } from './routes/sluzby/sluzebni-cesty'
+import { Route as SluzbyPrivatniServisRouteImport } from './routes/sluzby/privatni-servis'
+import { Route as SluzbyKongresySeminareCrRouteImport } from './routes/sluzby/kongresy-seminare-cr'
+import { Route as SluzbyKongresovaTuristikaRouteImport } from './routes/sluzby/kongresova-turistika'
+import { Route as SluzbyIncomingCeskaRepublikaRouteImport } from './routes/sluzby/incoming-ceska-republika'
+import { Route as SluzbyIncentivniZajezdyRouteImport } from './routes/sluzby/incentivni-zajezdy'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SluzbySportTravelRoute = SluzbySportTravelRouteImport.update({
+  id: '/sluzby/sport-travel',
+  path: '/sluzby/sport-travel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SluzbySluzebniCestyRoute = SluzbySluzebniCestyRouteImport.update({
+  id: '/sluzby/sluzebni-cesty',
+  path: '/sluzby/sluzebni-cesty',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SluzbyPrivatniServisRoute = SluzbyPrivatniServisRouteImport.update({
+  id: '/sluzby/privatni-servis',
+  path: '/sluzby/privatni-servis',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SluzbyKongresySeminareCrRoute =
+  SluzbyKongresySeminareCrRouteImport.update({
+    id: '/sluzby/kongresy-seminare-cr',
+    path: '/sluzby/kongresy-seminare-cr',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SluzbyKongresovaTuristikaRoute =
+  SluzbyKongresovaTuristikaRouteImport.update({
+    id: '/sluzby/kongresova-turistika',
+    path: '/sluzby/kongresova-turistika',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SluzbyIncomingCeskaRepublikaRoute =
+  SluzbyIncomingCeskaRepublikaRouteImport.update({
+    id: '/sluzby/incoming-ceska-republika',
+    path: '/sluzby/incoming-ceska-republika',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SluzbyIncentivniZajezdyRoute = SluzbyIncentivniZajezdyRouteImport.update({
+  id: '/sluzby/incentivni-zajezdy',
+  path: '/sluzby/incentivni-zajezdy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/sluzby/incentivni-zajezdy': typeof SluzbyIncentivniZajezdyRoute
+  '/sluzby/incoming-ceska-republika': typeof SluzbyIncomingCeskaRepublikaRoute
+  '/sluzby/kongresova-turistika': typeof SluzbyKongresovaTuristikaRoute
+  '/sluzby/kongresy-seminare-cr': typeof SluzbyKongresySeminareCrRoute
+  '/sluzby/privatni-servis': typeof SluzbyPrivatniServisRoute
+  '/sluzby/sluzebni-cesty': typeof SluzbySluzebniCestyRoute
+  '/sluzby/sport-travel': typeof SluzbySportTravelRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/sluzby/incentivni-zajezdy': typeof SluzbyIncentivniZajezdyRoute
+  '/sluzby/incoming-ceska-republika': typeof SluzbyIncomingCeskaRepublikaRoute
+  '/sluzby/kongresova-turistika': typeof SluzbyKongresovaTuristikaRoute
+  '/sluzby/kongresy-seminare-cr': typeof SluzbyKongresySeminareCrRoute
+  '/sluzby/privatni-servis': typeof SluzbyPrivatniServisRoute
+  '/sluzby/sluzebni-cesty': typeof SluzbySluzebniCestyRoute
+  '/sluzby/sport-travel': typeof SluzbySportTravelRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/sluzby/incentivni-zajezdy': typeof SluzbyIncentivniZajezdyRoute
+  '/sluzby/incoming-ceska-republika': typeof SluzbyIncomingCeskaRepublikaRoute
+  '/sluzby/kongresova-turistika': typeof SluzbyKongresovaTuristikaRoute
+  '/sluzby/kongresy-seminare-cr': typeof SluzbyKongresySeminareCrRoute
+  '/sluzby/privatni-servis': typeof SluzbyPrivatniServisRoute
+  '/sluzby/sluzebni-cesty': typeof SluzbySluzebniCestyRoute
+  '/sluzby/sport-travel': typeof SluzbySportTravelRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/sluzby/incentivni-zajezdy'
+    | '/sluzby/incoming-ceska-republika'
+    | '/sluzby/kongresova-turistika'
+    | '/sluzby/kongresy-seminare-cr'
+    | '/sluzby/privatni-servis'
+    | '/sluzby/sluzebni-cesty'
+    | '/sluzby/sport-travel'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/sluzby/incentivni-zajezdy'
+    | '/sluzby/incoming-ceska-republika'
+    | '/sluzby/kongresova-turistika'
+    | '/sluzby/kongresy-seminare-cr'
+    | '/sluzby/privatni-servis'
+    | '/sluzby/sluzebni-cesty'
+    | '/sluzby/sport-travel'
+  id:
+    | '__root__'
+    | '/'
+    | '/sluzby/incentivni-zajezdy'
+    | '/sluzby/incoming-ceska-republika'
+    | '/sluzby/kongresova-turistika'
+    | '/sluzby/kongresy-seminare-cr'
+    | '/sluzby/privatni-servis'
+    | '/sluzby/sluzebni-cesty'
+    | '/sluzby/sport-travel'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SluzbyIncentivniZajezdyRoute: typeof SluzbyIncentivniZajezdyRoute
+  SluzbyIncomingCeskaRepublikaRoute: typeof SluzbyIncomingCeskaRepublikaRoute
+  SluzbyKongresovaTuristikaRoute: typeof SluzbyKongresovaTuristikaRoute
+  SluzbyKongresySeminareCrRoute: typeof SluzbyKongresySeminareCrRoute
+  SluzbyPrivatniServisRoute: typeof SluzbyPrivatniServisRoute
+  SluzbySluzebniCestyRoute: typeof SluzbySluzebniCestyRoute
+  SluzbySportTravelRoute: typeof SluzbySportTravelRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +146,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sluzby/sport-travel': {
+      id: '/sluzby/sport-travel'
+      path: '/sluzby/sport-travel'
+      fullPath: '/sluzby/sport-travel'
+      preLoaderRoute: typeof SluzbySportTravelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sluzby/sluzebni-cesty': {
+      id: '/sluzby/sluzebni-cesty'
+      path: '/sluzby/sluzebni-cesty'
+      fullPath: '/sluzby/sluzebni-cesty'
+      preLoaderRoute: typeof SluzbySluzebniCestyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sluzby/privatni-servis': {
+      id: '/sluzby/privatni-servis'
+      path: '/sluzby/privatni-servis'
+      fullPath: '/sluzby/privatni-servis'
+      preLoaderRoute: typeof SluzbyPrivatniServisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sluzby/kongresy-seminare-cr': {
+      id: '/sluzby/kongresy-seminare-cr'
+      path: '/sluzby/kongresy-seminare-cr'
+      fullPath: '/sluzby/kongresy-seminare-cr'
+      preLoaderRoute: typeof SluzbyKongresySeminareCrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sluzby/kongresova-turistika': {
+      id: '/sluzby/kongresova-turistika'
+      path: '/sluzby/kongresova-turistika'
+      fullPath: '/sluzby/kongresova-turistika'
+      preLoaderRoute: typeof SluzbyKongresovaTuristikaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sluzby/incoming-ceska-republika': {
+      id: '/sluzby/incoming-ceska-republika'
+      path: '/sluzby/incoming-ceska-republika'
+      fullPath: '/sluzby/incoming-ceska-republika'
+      preLoaderRoute: typeof SluzbyIncomingCeskaRepublikaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sluzby/incentivni-zajezdy': {
+      id: '/sluzby/incentivni-zajezdy'
+      path: '/sluzby/incentivni-zajezdy'
+      fullPath: '/sluzby/incentivni-zajezdy'
+      preLoaderRoute: typeof SluzbyIncentivniZajezdyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SluzbyIncentivniZajezdyRoute: SluzbyIncentivniZajezdyRoute,
+  SluzbyIncomingCeskaRepublikaRoute: SluzbyIncomingCeskaRepublikaRoute,
+  SluzbyKongresovaTuristikaRoute: SluzbyKongresovaTuristikaRoute,
+  SluzbyKongresySeminareCrRoute: SluzbyKongresySeminareCrRoute,
+  SluzbyPrivatniServisRoute: SluzbyPrivatniServisRoute,
+  SluzbySluzebniCestyRoute: SluzbySluzebniCestyRoute,
+  SluzbySportTravelRoute: SluzbySportTravelRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

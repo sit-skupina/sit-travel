@@ -21,13 +21,13 @@ export function Footer() {
           <div className="footer-col">
             <p className="footer-col-heading">Služby</p>
             {[
-              { label: "Incentivní zájezdy", href: "#sluzby" },
-              { label: "Kongresová turistika", href: "#sluzby" },
-              { label: "Kongresy v ČR", href: "#sluzby" },
-              { label: "Incoming", href: "#sluzby" },
-              { label: "Služební cesty", href: "#sluzby" },
-              { label: "Privátní servis", href: "#sluzby" },
-              { label: "Sport Travel", href: "#sluzby" },
+              { label: "Incentivní zájezdy", href: "/sluzby/incentivni-zajezdy" },
+              { label: "Kongresová turistika", href: "/sluzby/kongresova-turistika" },
+              { label: "Kongresy v ČR", href: "/sluzby/kongresy-seminare-cr" },
+              { label: "Incoming", href: "/sluzby/incoming-ceska-republika" },
+              { label: "Služební cesty", href: "/sluzby/sluzebni-cesty" },
+              { label: "Privátní servis", href: "/sluzby/privatni-servis" },
+              { label: "Sport Travel", href: "/sluzby/sport-travel" },
             ].map((s) => (
               <a key={s.label} href={s.href} className="footer-link">{s.label}</a>
             ))}
