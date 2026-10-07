@@ -1,24 +1,35 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { cn } from "@/lib/utils";
+import { homeAnchor, pagePath, useLocale } from "@/lib/i18n";
+import { useUi } from "@/content/ui";
 import logoDark from "@/assets/sittravel-logo.png";
 import logoWhite from "@/assets/sittravel-logo-white.png";
 
-const NAV_ANCHORS = [
-  { anchor: "#sluzby", label: "Služby" },
-  { anchor: "#jak-to-funguje", label: "Jak to funguje" },
-  { anchor: "#o-nas", label: "O nás" },
-  { anchor: "#reference", label: "Reference" },
-  { anchor: "#faq", label: "FAQ" },
-  { anchor: "#kontakt", label: "Kontakt" },
-];
+export function Navbar({
+  transparentOnTop = true,
+  subpage = false,
+}: {
+  transparentOnTop?: boolean;
+  subpage?: boolean;
+}) {
+  const locale = useLocale();
+  const ui = useUi();
+  // Na homepage stačí kotva, na podstránkách musí odkaz vést zpět na homepage.
+  const anchor = (hash: string) => (subpage ? homeAnchor(locale, hash) : hash);
 
-export function Navbar({ transparentOnTop = true, subpage = false }: { transparentOnTop?: boolean; subpage?: boolean }) {
-  const navItems = NAV_ANCHORS.map(item => ({
-    href: subpage ? `/${item.anchor}` : item.anchor,
-    label: item.label,
-  }));
+  const navItems = [
+    { href: anchor("#sluzby"), label: ui.nav.services },
+    { href: anchor("#jak-to-funguje"), label: ui.nav.how },
+    { href: anchor("#o-nas"), label: ui.nav.about },
+    { href: anchor("#reference"), label: ui.nav.references },
+    { href: anchor("#faq"), label: ui.nav.faq },
+    { href: pagePath("contacts", locale), label: ui.nav.contact },
+  ];
+  const ctaHref = anchor("#kontakt");
+
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -41,7 +52,11 @@ export function Navbar({ transparentOnTop = true, subpage = false }: { transpare
       )}
     >
       <div className="mx-auto flex h-[60px] max-w-7xl items-center justify-between px-5 md:h-[72px] md:px-8">
-        <a href="/" className="relative flex items-center" aria-label="SIT Travel">
+        <a
+          href={pagePath("home", locale)}
+          className="relative flex items-center"
+          aria-label="SIT Travel"
+        >
           <img
             src={logoWhite}
             alt="SIT Travel"
@@ -61,7 +76,7 @@ export function Navbar({ transparentOnTop = true, subpage = false }: { transpare
           />
         </a>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-6 md:flex" aria-label={ui.nav.mainNav}>
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -74,8 +89,9 @@ export function Navbar({ transparentOnTop = true, subpage = false }: { transpare
               {item.label}
             </a>
           ))}
+          <LanguageSwitcher className={solid ? undefined : "lang-switch--on-dark"} />
           <Button variant="primary" size="cta" asChild>
-            <a href={subpage ? "/#kontakt" : "#kontakt"}>Poptejte akci</a>
+            <a href={ctaHref}>{ui.nav.cta}</a>
           </Button>
         </nav>
 
@@ -86,7 +102,7 @@ export function Navbar({ transparentOnTop = true, subpage = false }: { transpare
             solid ? "text-foreground" : "text-white",
           )}
           onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "Zavřít menu" : "Otevřít menu"}
+          aria-label={open ? ui.nav.closeMenu : ui.nav.openMenu}
           aria-expanded={open}
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -95,7 +111,10 @@ export function Navbar({ transparentOnTop = true, subpage = false }: { transpare
 
       {open && (
         <div className="border-t border-border bg-background md:hidden">
-          <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-4">
+          <nav
+            className="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-4"
+            aria-label={ui.nav.mainNav}
+          >
             {navItems.map((item) => (
               <a
                 key={item.label}
@@ -106,8 +125,11 @@ export function Navbar({ transparentOnTop = true, subpage = false }: { transpare
                 {item.label}
               </a>
             ))}
+            <LanguageSwitcher className="mt-2 px-3" />
             <Button variant="primary" size="cta" className="mt-3 w-full" asChild>
-              <a href={subpage ? "/#kontakt" : "#kontakt"} onClick={() => setOpen(false)}>Poptejte akci</a>
+              <a href={ctaHref} onClick={() => setOpen(false)}>
+                {ui.nav.cta}
+              </a>
             </Button>
           </nav>
         </div>

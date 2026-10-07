@@ -1,23 +1,48 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import {
+  Outlet,
+  Link,
+  createRootRoute,
+  HeadContent,
+  Scripts,
+  useRouterState,
+} from "@tanstack/react-router";
 
+import "@fontsource-variable/dm-sans";
+import "@fontsource/playfair-display/600.css";
+import "@fontsource/playfair-display/700.css";
 import appCss from "../styles.css?url";
+import { CookieBanner } from "@/components/CookieBanner";
+import { LocaleProvider, localeFromPathname, pagePath, useLocale } from "@/lib/i18n";
+
+const NOT_FOUND = {
+  cs: {
+    title: "Stránka nenalezena",
+    text: "Stránka, kterou hledáte, neexistuje nebo byla přesunuta.",
+    home: "Zpět na úvod",
+  },
+  en: {
+    title: "Page not found",
+    text: "The page you're looking for doesn't exist or has been moved.",
+    home: "Go home",
+  },
+};
 
 function NotFoundComponent() {
+  const locale = useLocale();
+  const t = NOT_FOUND[locale];
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
-        </p>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">{t.title}</h2>
+        <p className="mt-2 text-sm text-muted-foreground">{t.text}</p>
         <div className="mt-6">
-          <Link
-            to="/"
+          <a
+            href={pagePath("home", locale)}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Go home
-          </Link>
+            {t.home}
+          </a>
         </div>
       </div>
     </div>
@@ -53,17 +78,6 @@ export const Route = createRootRoute({
       },
     ],
     links: [
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "preload",
-        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap",
-        as: "style",
-      },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap",
-      },
       {
         rel: "stylesheet",
         href: appCss,
@@ -76,8 +90,9 @@ export const Route = createRootRoute({
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
   return (
-    <html lang="cs">
+    <html lang={localeFromPathname(pathname)}>
       <head>
         <HeadContent />
       </head>
@@ -90,5 +105,11 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  return <Outlet />;
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  return (
+    <LocaleProvider locale={localeFromPathname(pathname)}>
+      <Outlet />
+      <CookieBanner />
+    </LocaleProvider>
+  );
 }

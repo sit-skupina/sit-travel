@@ -1,54 +1,56 @@
 import React from "react";
+import {
+  Phone,
+  Mail,
+  Globe,
+  Presentation,
+  FileText,
+  Plane,
+  Star,
+  Building2,
+  User,
+  ClipboardCheck,
+  BedDouble,
+  Shield,
+  Users,
+  Music,
+  Eye,
+  Trophy,
+} from "lucide-react";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
-import { Phone, Mail } from "lucide-react";
+import { COMPANY } from "@/lib/site";
+import { homeAnchor, serviceHref, SERVICE_IDS, useLocale, type ServiceId } from "@/lib/i18n";
+import { services, type IconKey, type Section } from "@/content/services";
+import { serviceImages } from "@/content/service-images";
+import { useUi } from "@/content/ui";
 
-import imgIncentivni from "@/assets/sluzby-bentogrid/incentivni-zajezdy.webp";
-import imgPrivatni from "@/assets/sluzby-bentogrid/privatni-servis.webp";
-import imgKongresova from "@/assets/sluzby-bentogrid/kongresova-turistika.webp";
-import imgIncoming from "@/assets/sluzby-bentogrid/incoming.webp";
-import imgSluzebni from "@/assets/sluzby-bentogrid/sluzebni-cesty.webp";
-import imgKongresy from "@/assets/sluzby-bentogrid/kongresy-v-cr.webp";
-import imgSport from "@/assets/sluzby-bentogrid/sport-travel.webp";
+const ICONS: Record<IconKey, React.ReactNode> = {
+  globe: <Globe size={28} />,
+  presentation: <Presentation size={28} />,
+  fileText: <FileText size={28} />,
+  plane: <Plane size={28} />,
+  star: <Star size={28} />,
+  building2: <Building2 size={28} />,
+  user: <User size={28} />,
+  clipboardCheck: <ClipboardCheck size={28} />,
+  bedDouble: <BedDouble size={28} />,
+  shield: <Shield size={28} />,
+  users: <Users size={28} />,
+  music: <Music size={28} />,
+  eye: <Eye size={28} />,
+  trophy: <Trophy size={28} />,
+};
 
-const ALL_SERVICES = [
-  { slug: "incentivni-zajezdy", name: "Incentivní zájezdy", sub: "Originální programy pro zaměstnance, management a obchodní partnery.", img: imgIncentivni },
-  { slug: "privatni-servis", name: "Privátní servis", sub: "F1, Wimbledon, privátní jet. Pro ty, kteří nechtějí kompromisy.", img: imgPrivatni },
-  { slug: "kongresova-turistika", name: "Kongresová turistika", sub: "Kongresy a semináře po celém světě.", img: imgKongresova },
-  { slug: "incoming-ceska-republika", name: "Incoming", sub: "Poznávací pobyty v ČR pro zahraniční klienty.", img: imgIncoming },
-  { slug: "sluzebni-cesty", name: "Služební cesty", sub: "Letenky, ubytování, transfery od jednoho dodavatele.", img: imgSluzebni },
-  { slug: "kongresy-seminare-cr", name: "Kongresy a konference v ČR", sub: "Organizace kongresů a společenských akcí na klíč.", img: imgKongresy },
-  { slug: "sport-travel", name: "Sport Travel", sub: "Světové maratony, zápasy a závody. Registrace i ubytování.", img: imgSport },
-];
-
-interface ServicePageProps {
-  slug: string;
-  hero: {
-    eyebrow: string;
-    h1: string;
-    subtitle: string;
-    ctaLabel: string;
-    bgImage: string;
-  };
-  intro: {
-    h2: string;
-    paragraphs: string[];
-  };
-  cta: {
-    h2: string;
-    subtitle: string;
-    ctaLabel: string;
-    contactNote?: string;
-    contactEmail?: string;
-    contactPhone?: string;
-    extraLink?: { href: string; label: string };
-  };
-  children?: React.ReactNode;
-}
-
-export function ServicePage({ slug, hero, intro, cta, children }: ServicePageProps) {
-  const currentService = ALL_SERVICES.find(s => s.slug === slug);
-  const related = ALL_SERVICES.filter(s => s.slug !== slug).slice(0, 3);
+/** Kompletní podstránka služby podle ID a aktuálního jazyka. */
+export function ServicePage({ id }: { id: ServiceId }) {
+  const locale = useLocale();
+  const ui = useUi();
+  const content = services[locale][id];
+  const related = SERVICE_IDS.filter((s) => s !== id).slice(0, 3);
+  const contactEmail = content.cta.contactEmail ?? COMPANY.email;
+  const contactPhone = content.cta.contactPhone ?? COMPANY.phone;
+  const kontakt = homeAnchor(locale, "#kontakt");
 
   return (
     <div className="min-h-screen bg-background">
@@ -56,57 +58,85 @@ export function ServicePage({ slug, hero, intro, cta, children }: ServicePagePro
 
       {/* Breadcrumb */}
       <div className="sp-breadcrumb-wrap">
-        <nav className="sp-breadcrumb" aria-label="Breadcrumb">
-          <a href="/" className="sp-bc-link">Domů</a>
-          <span className="sp-bc-sep" aria-hidden="true">›</span>
-          <a href="/#sluzby" className="sp-bc-link">Služby</a>
-          <span className="sp-bc-sep" aria-hidden="true">›</span>
-          <span className="sp-bc-current">{currentService?.name}</span>
+        <nav className="sp-breadcrumb" aria-label={ui.breadcrumb.aria}>
+          <a href={homeAnchor(locale, "")} className="sp-bc-link">
+            {ui.breadcrumb.home}
+          </a>
+          <span className="sp-bc-sep" aria-hidden="true">
+            ›
+          </span>
+          <a href={homeAnchor(locale, "#sluzby")} className="sp-bc-link">
+            {ui.breadcrumb.services}
+          </a>
+          <span className="sp-bc-sep" aria-hidden="true">
+            ›
+          </span>
+          <span className="sp-bc-current">{content.name}</span>
         </nav>
       </div>
 
       {/* Hero */}
-      <section className="sp-hero" style={{ backgroundImage: `url(${hero.bgImage})` }}>
+      <section className="sp-hero" style={{ backgroundImage: `url(${serviceImages[id]})` }}>
         <div className="sp-hero-overlay" aria-hidden="true" />
         <div className="sp-hero-content">
-          <span className="sp-hero-eyebrow">{hero.eyebrow}</span>
-          <h1 className="sp-hero-h1 font-serif">{hero.h1}</h1>
-          <p className="sp-hero-sub">{hero.subtitle}</p>
-          <a href="/#kontakt" className="sp-hero-cta">{hero.ctaLabel}</a>
+          <span className="sp-hero-eyebrow">{content.hero.eyebrow}</span>
+          <h1 className="sp-hero-h1 font-serif">{content.hero.h1}</h1>
+          <p className="sp-hero-sub">{content.hero.subtitle}</p>
+          <a href={kontakt} className="sp-hero-cta">
+            {content.hero.ctaLabel}
+          </a>
         </div>
       </section>
 
       {/* Intro */}
       <section className="sp-intro-section">
         <div className="sp-intro-inner">
-          <h2 className="sp-intro-h2 font-serif">{intro.h2}</h2>
-          {intro.paragraphs.map((p, i) => (
-            <p key={i} className="sp-intro-body">{p}</p>
+          <h2 className="sp-intro-h2 font-serif">{content.intro.h2}</h2>
+          {content.intro.paragraphs.map((p, i) => (
+            <p key={i} className="sp-intro-body">
+              {p}
+            </p>
           ))}
         </div>
       </section>
 
       {/* Page-specific sections */}
-      {children}
+      {content.sections.map((section, i) => (
+        <SectionView key={i} section={section} />
+      ))}
 
       {/* Related services */}
       <section className="sp-related-section">
         <div className="sp-related-inner">
-          <h3 className="sp-related-heading">Mohlo by Vás zajímat</h3>
+          <h3 className="sp-related-heading">{ui.service.related}</h3>
           <div className="sp-related-grid">
-            {related.map(s => (
-              <a key={s.slug} href={`/sluzby/${s.slug}`} className="sp-related-card">
-                <div className="sp-related-img-wrap">
-                  <img src={s.img} alt={s.name} className="sp-related-img" loading="lazy" />
-                  <div className="sp-related-overlay" aria-hidden="true" />
-                </div>
-                <div className="sp-related-text">
-                  <h4 className="sp-related-name">{s.name}</h4>
-                  <p className="sp-related-sub">{s.sub}</p>
-                  <span className="sp-related-more">Zjistit více →</span>
-                </div>
-              </a>
-            ))}
+            {related.map((rid) => {
+              const { href, external } = serviceHref(rid, locale);
+              const r = services[locale][rid];
+              return (
+                <a
+                  key={rid}
+                  href={href}
+                  className="sp-related-card"
+                  {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+                >
+                  <div className="sp-related-img-wrap">
+                    <img
+                      src={serviceImages[rid]}
+                      alt={r.name}
+                      className="sp-related-img"
+                      loading="lazy"
+                    />
+                    <div className="sp-related-overlay" aria-hidden="true" />
+                  </div>
+                  <div className="sp-related-text">
+                    <h4 className="sp-related-name">{r.name}</h4>
+                    <p className="sp-related-sub">{r.card}</p>
+                    <span className="sp-related-more">{ui.service.more}</span>
+                  </div>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -114,24 +144,31 @@ export function ServicePage({ slug, hero, intro, cta, children }: ServicePagePro
       {/* CTA */}
       <section className="sp-cta-section">
         <div className="sp-cta-inner">
-          <span className="sp-cta-eyebrow">Nezávazná poptávka</span>
-          <h2 className="sp-cta-h2 font-serif">{cta.h2}</h2>
-          <p className="sp-cta-sub">{cta.subtitle}</p>
+          <span className="sp-cta-eyebrow">{ui.service.inquiry}</span>
+          <h2 className="sp-cta-h2 font-serif">{content.cta.h2}</h2>
+          <p className="sp-cta-sub">{content.cta.subtitle}</p>
           <div className="sp-cta-actions">
-            <a href="/#kontakt" className="sp-cta-btn">{cta.ctaLabel}</a>
-            {cta.extraLink && (
-              <a href={cta.extraLink.href} target="_blank" rel="noreferrer" className="sp-cta-btn-outline">
-                {cta.extraLink.label}
+            <a href={kontakt} className="sp-cta-btn">
+              {content.cta.ctaLabel}
+            </a>
+            {content.cta.extraLink && (
+              <a
+                href={content.cta.extraLink.href}
+                target="_blank"
+                rel="noreferrer"
+                className="sp-cta-btn-outline"
+              >
+                {content.cta.extraLink.label}
               </a>
             )}
           </div>
-          {cta.contactNote && <p className="sp-cta-note">{cta.contactNote}</p>}
+          {content.cta.contactNote && <p className="sp-cta-note">{content.cta.contactNote}</p>}
           <div className="sp-cta-contacts">
-            <a href="tel:+420241441147" className="sp-cta-contact-link">
-              <Phone size={15} /> {cta.contactPhone ?? "+420 241 441 147"}
+            <a href={`tel:${contactPhone.replace(/\s/g, "")}`} className="sp-cta-contact-link">
+              <Phone size={15} /> {contactPhone}
             </a>
-            <a href={`mailto:${cta.contactEmail ?? "sit@sittravel.cz"}`} className="sp-cta-contact-link">
-              <Mail size={15} /> {cta.contactEmail ?? "sit@sittravel.cz"}
+            <a href={`mailto:${contactEmail}`} className="sp-cta-contact-link">
+              <Mail size={15} /> {contactEmail}
             </a>
           </div>
         </div>
@@ -140,6 +177,42 @@ export function ServicePage({ slug, hero, intro, cta, children }: ServicePagePro
       <Footer />
     </div>
   );
+}
+
+function SectionView({ section }: { section: Section }) {
+  switch (section.type) {
+    case "features":
+      return (
+        <FeatureColumns
+          heading={section.heading}
+          columns={section.items.map((c) => ({ icon: ICONS[c.icon], name: c.name, desc: c.desc }))}
+        />
+      );
+    case "events":
+      return <EventsList heading={section.heading} events={section.items} />;
+    case "twocol":
+      return <FeatureTwoCol heading={section.heading} left={section.left} right={section.right} />;
+    case "destinations":
+      return <DestinationGrid heading={section.heading} destinations={section.items} />;
+    case "cards":
+      return (
+        <CardGrid
+          heading={section.heading}
+          bg={section.bg}
+          cards={section.items.map((c) => ({ ...c, icon: c.icon ? ICONS[c.icon] : undefined }))}
+        />
+      );
+    case "checklist":
+      return <CheckList heading={section.heading} bg={section.bg} items={section.items} />;
+    case "twofeatures":
+      return (
+        <TwoColFeatures
+          heading={section.heading}
+          left={{ ...section.left, icon: ICONS[section.left.icon] }}
+          right={{ ...section.right, icon: ICONS[section.right.icon] }}
+        />
+      );
+  }
 }
 
 // ─── Reusable section components ─────────────────────────────────────────────
@@ -217,10 +290,14 @@ export function FeatureTwoCol({
         {heading && <h2 className="sp-features-h2 font-serif">{heading}</h2>}
         <div className="sp-twocol-list">
           <ul className="sp-list">
-            {left.map((item, i) => <li key={i}>{item}</li>)}
+            {left.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
           </ul>
           <ul className="sp-list">
-            {right.map((item, i) => <li key={i}>{item}</li>)}
+            {right.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
           </ul>
         </div>
       </div>
@@ -228,19 +305,27 @@ export function FeatureTwoCol({
   );
 }
 
-export function CheckList({ heading, items, bg = "white" }: {
+export function CheckList({
+  heading,
+  items,
+  bg = "white",
+}: {
   heading?: string;
   items: string[];
   bg?: "white" | "slate";
 }) {
   return (
-    <section className={`sp-checklist-section${bg === "slate" ? " sp-checklist-section--slate" : ""}`}>
+    <section
+      className={`sp-checklist-section${bg === "slate" ? " sp-checklist-section--slate" : ""}`}
+    >
       <div className="sp-checklist-inner">
         {heading && <h2 className="sp-checklist-h2 font-serif">{heading}</h2>}
         <ul className="sp-checklist">
           {items.map((item, i) => (
             <li key={i} className="sp-checklist-item">
-              <span className="sp-check-mark" aria-hidden="true">✓</span>
+              <span className="sp-check-mark" aria-hidden="true">
+                ✓
+              </span>
               {item}
             </li>
           ))}
