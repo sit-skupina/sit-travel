@@ -24,6 +24,7 @@ import { homeAnchor, serviceHref, SERVICE_IDS, useLocale, type ServiceId } from 
 import { services, type IconKey, type Section } from "@/content/services";
 import { serviceImages } from "@/content/service-images";
 import { useUi } from "@/content/ui";
+import { SportShowcase } from "./SportShowcase";
 
 const ICONS: Record<IconKey, React.ReactNode> = {
   globe: <Globe size={28} />,
@@ -181,6 +182,8 @@ export function ServicePage({ id }: { id: ServiceId }) {
 
 function SectionView({ section }: { section: Section }) {
   switch (section.type) {
+    case "sportShowcase":
+      return <SportShowcase />;
     case "features":
       return (
         <FeatureColumns

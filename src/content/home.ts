@@ -1,6 +1,7 @@
 // Texty homepage — česky a anglicky.
 
 import type { Locale } from "@/lib/i18n";
+import { COMPANY } from "@/lib/site";
 
 const cs = {
   meta: {
@@ -41,19 +42,31 @@ const cs = {
         num: "01",
         title: "Poptáte nás",
         desc: "Jeden e-mail nebo telefonát. Řeknete nám typ akce, počet lidí a rámcový termín. Nic víc nepotřebujeme ke startu.",
+        chips: [
+          COMPANY.email,
+          COMPANY.phone,
+          "Typ akce: Incentivní zájezd",
+          "Počet osob: 40",
+          "Termín: září",
+        ],
       },
       {
         num: "02",
         title: "Do 48 hodin máte konkrétní návrh",
         desc: "Destinace, program, rozpočet. Žádné obecné nabídky — návrh odpovídá přesně Vašemu požadavku.",
+        chips: ["Destinace", "Program", "Rozpočet"],
       },
       {
         num: "03",
         title: "Akce proběhne bez starostí",
         desc: "Od letenek po galavečer řešíme vše my. Po skončení dostanete přehledné vyúčtování a fotodokumentaci.",
+        chips: ["Letenky", "Galavečer", "Vyúčtování", "Fotodokumentace"],
       },
     ],
     cta: "Poptejte akci",
+    ring: "48 h",
+    stepsLabel: "Kroky",
+    goTo: "Přejít na krok",
   },
   about: {
     eyebrow: "O společnosti",
@@ -62,6 +75,14 @@ const cs = {
     p2: "Zakládáme si na tom, že každý klient mluví s člověkem, který jeho prostředí skutečně zná. Stabilní tým, osvědčení partneři v destinacích, osobní zodpovědnost za každou akci.",
     badges: ["Akreditovaný agent IATA", "Člen ACK ČR"],
     imageAlt: "O firmě SIT Travel",
+    mark: "mluví s člověkem, který jeho prostředí skutečně zná",
+    stamp: "SIT TRAVEL · OD ROKU 1991 · PRAHA · ",
+    timelineLabel: "Časová osa",
+    timeline: [
+      { year: "1991", label: "Na trhu nepřetržitě od roku 1991" },
+      { year: "1995", label: "Akreditovaný agent IATA od roku 1995" },
+      { year: "Dnes", label: "Více než 40 předních firem a institucí" },
+    ],
   },
   references: {
     eyebrow: "Reference",
@@ -153,19 +174,31 @@ const en: HomeContent = {
         num: "01",
         title: "You send an enquiry",
         desc: "One e-mail or phone call. Tell us the type of event, the number of people and a rough date. That is all we need to get started.",
+        chips: [
+          COMPANY.email,
+          COMPANY.phone,
+          "Event type: Incentive trip",
+          "People: 40",
+          "Date: September",
+        ],
       },
       {
         num: "02",
         title: "Within 48 hours you have a concrete proposal",
         desc: "Destination, programme, budget. No generic offers — the proposal matches your requirements exactly.",
+        chips: ["Destination", "Programme", "Budget"],
       },
       {
         num: "03",
         title: "The event runs without worries",
         desc: "From flights to the gala dinner, we handle everything. Afterwards you receive a clear final statement and photo documentation.",
+        chips: ["Flights", "Gala dinner", "Final statement", "Photo documentation"],
       },
     ],
     cta: "Request an event",
+    ring: "48 h",
+    stepsLabel: "Steps",
+    goTo: "Go to step",
   },
   about: {
     eyebrow: "About the company",
@@ -174,6 +207,14 @@ const en: HomeContent = {
     p2: "We make sure that every client speaks with someone who genuinely knows their business. A stable team, proven partners in the destinations, personal responsibility for every event.",
     badges: ["IATA accredited agent", "Member of ACK ČR"],
     imageAlt: "About SIT Travel",
+    mark: "speaks with someone who genuinely knows their business",
+    stamp: "SIT TRAVEL · SINCE 1991 · PRAGUE · ",
+    timelineLabel: "Timeline",
+    timeline: [
+      { year: "1991", label: "In continuous business since 1991" },
+      { year: "1995", label: "IATA accredited agent since 1995" },
+      { year: "Today", label: "More than 40 leading companies and institutions" },
+    ],
   },
   references: {
     eyebrow: "References",

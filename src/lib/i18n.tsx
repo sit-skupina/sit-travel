@@ -98,6 +98,10 @@ export function localizedHead({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:locale", content: locale === "cs" ? "cs_CZ" : "en_GB" },
+      { property: "og:site_name", content: "SIT Travel" },
+      { property: "og:url", content: abs(paths[locale]) },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
     ],
     links: [
       { rel: "canonical", href: abs(paths[locale]) },

@@ -1,4 +1,6 @@
 // Tým SIT Travel. Pořadí odpovídá domluvě s Pavlem: Pavel, bratr, Lucka, Renata, Alena.
+// Jména jsou zatím záměrně prázdná — na webu se zobrazí zástupný text „Jméno doplníme“.
+// Skutečná jména doplnit do `name` (id vpravo napovídá, kdo je kdo).
 //
 // DOPLNIT před spuštěním (označeno `todo`):
 //  - celá jména, pozice, e-maily a mobily (u členů, kde pole chybí, se nezobrazí / ukáže se zástupný text)
@@ -23,24 +25,24 @@ export interface TeamMember {
 export const team: TeamMember[] = [
   {
     id: "pavel-vlk",
-    name: "Pavel Vlk",
+    name: "",
     role: { cs: "", en: "" },
     email: "vlk@sittravel.cz",
     phone: "+420 606 209 108",
     todo: true,
   },
   { id: "bratr", name: "", role: { cs: "", en: "" }, todo: true },
-  { id: "lucie", name: "Lucie", role: { cs: "", en: "" }, todo: true },
+  { id: "lucie", name: "", role: { cs: "", en: "" }, todo: true },
   {
     id: "renata-felcarkova",
-    name: "Renata Felčárková",
+    name: "",
     role: { cs: "", en: "" },
     email: "renata.felcarkova@sittravel.cz",
     todo: true,
   },
   {
     id: "alena-bright",
-    name: "Alena Bright",
+    name: "",
     role: { cs: "", en: "" },
     email: "alena.bright@sittravel.cz",
     todo: true,

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Při přidání nebo přejmenování stránky upravit i tento soubor (a src/lib/i18n.tsx). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.sittravel.cz/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/en</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/kontakty</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/kontakty"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/kontakty"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/kontakty"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/kontakty"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/ochrana-osobnich-udaju</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/ochrana-osobnich-udaju"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/ochrana-osobnich-udaju"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/en/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/ochrana-osobnich-udaju"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/ochrana-osobnich-udaju"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/sluzby/incentivni-zajezdy</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/sluzby/incentivni-zajezdy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/services/incentive-trips"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/sluzby/incentivni-zajezdy"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/en/services/incentive-trips</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/sluzby/incentivni-zajezdy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/services/incentive-trips"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/sluzby/incentivni-zajezdy"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/sluzby/privatni-servis</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/sluzby/privatni-servis"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/services/private-service"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/sluzby/privatni-servis"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/en/services/private-service</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/sluzby/privatni-servis"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/services/private-service"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/sluzby/privatni-servis"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/sluzby/kongresova-turistika</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/sluzby/kongresova-turistika"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/services/congress-travel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/sluzby/kongresova-turistika"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/en/services/congress-travel</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/sluzby/kongresova-turistika"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/services/congress-travel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/sluzby/kongresova-turistika"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/sluzby/incoming-ceska-republika</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/sluzby/incoming-ceska-republika"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/services/incoming-czech-republic"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/sluzby/incoming-ceska-republika"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/en/services/incoming-czech-republic</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/sluzby/incoming-ceska-republika"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/services/incoming-czech-republic"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/sluzby/incoming-ceska-republika"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/sluzby/sluzebni-cesty</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/sluzby/sluzebni-cesty"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/services/business-travel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/sluzby/sluzebni-cesty"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/en/services/business-travel</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/sluzby/sluzebni-cesty"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/services/business-travel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/sluzby/sluzebni-cesty"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/sluzby/kongresy-seminare-cr</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/sluzby/kongresy-seminare-cr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/services/congresses-czech-republic"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/sluzby/kongresy-seminare-cr"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/en/services/congresses-czech-republic</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/sluzby/kongresy-seminare-cr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/services/congresses-czech-republic"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/sluzby/kongresy-seminare-cr"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/sluzby/sport-travel</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/sluzby/sport-travel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/services/sport-travel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/sluzby/sport-travel"/>
+  </url>
+  <url>
+    <loc>https://www.sittravel.cz/en/services/sport-travel</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.sittravel.cz/sluzby/sport-travel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sittravel.cz/en/services/sport-travel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sittravel.cz/sluzby/sport-travel"/>
+  </url>
+</urlset>

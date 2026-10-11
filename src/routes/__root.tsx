@@ -62,20 +62,8 @@ export const Route = createRootRoute({
           "Prémiová B2B cestovní kancelář s 35 lety zkušeností. Incentivní zájezdy, kongresy a služební cesty pro firemní klientelu. Akreditovaný agent IATA, člen ACK ČR.",
       },
       { name: "author", content: "SIT Travel s.r.o." },
-      { property: "og:title", content: "SIT Travel — B2B cestovní kancelář pro firmy" },
-      {
-        property: "og:description",
-        content:
-          "Incentivní zájezdy, kongresy a služební cesty. Akreditovaný agent IATA, člen ACK ČR. Na trhu od roku 1991.",
-      },
       { property: "og:type", content: "website" },
-      { property: "og:locale", content: "cs_CZ" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SIT Travel — B2B cestovní kancelář pro firmy" },
-      {
-        name: "twitter:description",
-        content: "Incentivní zájezdy, kongresy a služební cesty. 35 let zkušeností.",
-      },
     ],
     links: [
       {

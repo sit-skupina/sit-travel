@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as OchranaOsobnichUdajuRouteImport } from './routes/ochrana-osobnich-udaju'
 import { Route as KontaktyRouteImport } from './routes/kontakty'
+import { Route as SplatRouteImport } from './routes/$'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EnIndexRouteImport } from './routes/en/index'
 import { Route as SluzbySlugRouteImport } from './routes/sluzby/$slug'
@@ -26,6 +27,11 @@ const OchranaOsobnichUdajuRoute = OchranaOsobnichUdajuRouteImport.update({
 const KontaktyRoute = KontaktyRouteImport.update({
   id: '/kontakty',
   path: '/kontakty',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SplatRoute = SplatRouteImport.update({
+  id: '/$',
+  path: '/$',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -61,6 +67,7 @@ const EnServicesSlugRoute = EnServicesSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
   '/kontakty': typeof KontaktyRoute
   '/ochrana-osobnich-udaju': typeof OchranaOsobnichUdajuRoute
   '/en/contact': typeof EnContactRoute
@@ -71,6 +78,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
   '/kontakty': typeof KontaktyRoute
   '/ochrana-osobnich-udaju': typeof OchranaOsobnichUdajuRoute
   '/en/contact': typeof EnContactRoute
@@ -82,6 +90,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
   '/kontakty': typeof KontaktyRoute
   '/ochrana-osobnich-udaju': typeof OchranaOsobnichUdajuRoute
   '/en/contact': typeof EnContactRoute
@@ -94,6 +103,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/$'
     | '/kontakty'
     | '/ochrana-osobnich-udaju'
     | '/en/contact'
@@ -104,6 +114,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/$'
     | '/kontakty'
     | '/ochrana-osobnich-udaju'
     | '/en/contact'
@@ -114,6 +125,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/$'
     | '/kontakty'
     | '/ochrana-osobnich-udaju'
     | '/en/contact'
@@ -125,6 +137,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SplatRoute: typeof SplatRoute
   KontaktyRoute: typeof KontaktyRoute
   OchranaOsobnichUdajuRoute: typeof OchranaOsobnichUdajuRoute
   EnContactRoute: typeof EnContactRoute
@@ -148,6 +161,13 @@ declare module '@tanstack/react-router' {
       path: '/kontakty'
       fullPath: '/kontakty'
       preLoaderRoute: typeof KontaktyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$': {
+      id: '/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof SplatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -197,6 +217,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SplatRoute: SplatRoute,
   KontaktyRoute: KontaktyRoute,
   OchranaOsobnichUdajuRoute: OchranaOsobnichUdajuRoute,
   EnContactRoute: EnContactRoute,

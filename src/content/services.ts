@@ -20,6 +20,7 @@ export type IconKey =
   | "trophy";
 
 export type Section =
+  | { type: "sportShowcase" }
   | { type: "features"; heading: string; items: { icon: IconKey; name: string; desc: string }[] }
   | { type: "events"; heading: string; items: string[] }
   | { type: "twocol"; heading: string; left: string[]; right: string[] }
@@ -499,38 +500,7 @@ const cs: Record<ServiceId, ServiceContent> = {
       ctaLabel: "Poptejte Sport Travel",
       contactNote: "Potřebujete poradit s výběrem události nebo destinace?",
     },
-    sections: [
-      {
-        type: "twofeatures",
-        heading: "Typy cest",
-        left: {
-          icon: "eye",
-          name: "Sportovní události jako divák",
-          desc: "Vstupenky, letenky, ubytování, transfery. Zajistíme místo co nejblíže dění.",
-          examples:
-            "Formule 1 · Fotbalové ligy · Tenisové grandslamy · Olympijské hry · Hokejové MS",
-        },
-        right: {
-          icon: "trophy",
-          name: "Účast na světových maratonech",
-          desc: "Registrace na vybraný maraton, doprava, ubytování, doplňkový program. Soustřeďte se jen na výsledek.",
-          examples: "New York · London · Berlín · Boston · Chicago · Tokio",
-        },
-      },
-      {
-        type: "checklist",
-        heading: "Co zajistíme",
-        bg: "slate",
-        items: [
-          "Registrace na sportovní událost nebo závod",
-          "Letenky za nejlepší dostupné tarify",
-          "Ubytování v optimální lokalitě u místa konání",
-          "Transfery z letiště a na místo konání",
-          "Vstupenky na tribunu nebo do VIP zóny",
-          "Doplňkový kulturní a zábavní program",
-        ],
-      },
-    ],
+    sections: [{ type: "sportShowcase" }],
   },
 };
 
@@ -976,38 +946,7 @@ const en: Record<ServiceId, ServiceContent> = {
       ctaLabel: "Request Sport Travel",
       contactNote: "Need advice on choosing an event or destination?",
     },
-    sections: [
-      {
-        type: "twofeatures",
-        heading: "Types of trips",
-        left: {
-          icon: "eye",
-          name: "Sporting events as a spectator",
-          desc: "Tickets, flights, accommodation, transfers. We secure a place as close to the action as possible.",
-          examples:
-            "Formula 1 · Football leagues · Tennis Grand Slams · Olympic Games · Ice Hockey World Championship",
-        },
-        right: {
-          icon: "trophy",
-          name: "Taking part in world marathons",
-          desc: "Registration for the marathon of your choice, transport, accommodation, supporting programme. Focus only on your result.",
-          examples: "New York · London · Berlin · Boston · Chicago · Tokyo",
-        },
-      },
-      {
-        type: "checklist",
-        heading: "What we take care of",
-        bg: "slate",
-        items: [
-          "Registration for a sporting event or race",
-          "Flights at the best available fares",
-          "Accommodation in an optimal location near the venue",
-          "Transfers from the airport and to the venue",
-          "Tickets for the stands or the VIP area",
-          "Supporting cultural and entertainment programme",
-        ],
-      },
-    ],
+    sections: [{ type: "sportShowcase" }],
   },
 };
 

@@ -4,6 +4,8 @@ import { Footer } from "@/components/Footer";
 import { InquiryForm } from "@/components/InquiryForm";
 import { ConsentMap } from "@/components/ConsentMap";
 import { TeamGrid } from "@/components/TeamGrid";
+import { HowItWorks } from "@/components/HowItWorks";
+import { AboutBlock } from "@/components/AboutBlock";
 import { Button } from "@/components/ui/button";
 import { Clock, Shield, Phone, Mail, Plane, ChevronDown } from "lucide-react";
 import { COMPANY, BROCHURE_FILENAME } from "@/lib/site";
@@ -27,7 +29,6 @@ import zeppelin from "@/assets/clients/zeppelin.png";
 import heroBg from "@/assets/hero-bg.webp";
 import heroBg2 from "@/assets/hero-bg-2.webp";
 import heroBg3 from "@/assets/hero-bg-3.webp";
-import oFirme from "@/assets/o-firme.webp";
 import brozura from "@/assets/SIT Travel brozura 2025 UPDATE (1).pdf";
 
 // Reference podle seznamu od Pavla. Pořadí odpovídá rozložení mřížky (logoGrid níže):
@@ -262,79 +263,12 @@ export function HomePage() {
       </section>
 
       {/* How it works */}
-      <section id="jak-to-funguje" className="how-section">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <div className="text-center">
-            <h2
-              className="font-serif"
-              style={{
-                fontSize: "40px",
-                fontWeight: 600,
-                color: "#1A1A1A",
-                lineHeight: 1.2,
-                margin: 0,
-              }}
-            >
-              {c.how.heading}
-            </h2>
-            <p
-              style={{
-                fontFamily: "var(--font-sans)",
-                fontSize: "16px",
-                color: "#6B6A66",
-                marginTop: "20px",
-                lineHeight: 1.65,
-              }}
-            >
-              {c.how.sub}
-            </p>
-          </div>
-
-          <div className="how-timeline">
-            <div className="how-timeline-line" aria-hidden />
-            <div className="how-grid">
-              {c.how.steps.map(({ num, title, desc }) => (
-                <div key={num} className="how-step">
-                  <div className="how-step-circle">
-                    <span className="how-step-num">{num}</span>
-                  </div>
-                  <h3 className="how-step-title">{title}</h3>
-                  <p className="how-step-desc">{desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="text-center" style={{ marginTop: "56px" }}>
-            <a href="#kontakt" className="how-cta">
-              {c.how.cta}
-            </a>
-          </div>
-        </div>
-      </section>
+      <HowItWorks />
 
       {/* About + Team */}
       <section id="o-nas" className="about-section">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <div className="about-layout">
-            <div className="about-text">
-              <span className="about-eyebrow">{c.about.eyebrow}</span>
-              <h2 className="about-heading font-serif">{c.about.heading}</h2>
-              <p className="about-body">{c.about.p1}</p>
-              <p className="about-body">{c.about.p2}</p>
-              <div className="about-badges">
-                {c.about.badges.map((b) => (
-                  <span key={b} className="about-badge">
-                    {b}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="about-image-wrap">
-              <img src={oFirme} alt={c.about.imageAlt} className="about-image-placeholder" />
-            </div>
-          </div>
+          <AboutBlock />
 
           <div id="tym" className="team-section">
             <div className="team-header">
