@@ -1,0 +1,102 @@
+[build]
+  command = "npm run build"
+  publish = "dist/client"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Statický build (TanStack Start, předrenderované HTML pro každou stránku).
+# Neexistující adresy zobrazí public/404.html.
+
+# Dlouhá cache pro hashované soubory
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Staré adresy z původního sittravel.cz → nové stránky
+# (zdroj pravdy: src/lib/redirects.ts — při změně upravit i zde)
+[[redirects]]
+  from = "/o-nas"
+  to = "/#o-nas"
+  status = 301
+
+[[redirects]]
+  from = "/reference"
+  to = "/#reference"
+  status = 301
+
+[[redirects]]
+  from = "/reference-test0"
+  to = "/#reference"
+  status = 301
+
+[[redirects]]
+  from = "/kontakt"
+  to = "/kontakty"
+  status = 301
+
+[[redirects]]
+  from = "/ke-stazeni"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/aktuality"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/fotografie"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/sitemap"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/gdpr"
+  to = "/ochrana-osobnich-udaju"
+  status = 301
+
+[[redirects]]
+  from = "/obchodni-podminky"
+  to = "/dokumenty/smluvni-podminky-sit-travel.pdf"
+  status = 301
+
+[[redirects]]
+  from = "/hlavni-sluzby"
+  to = "/#sluzby"
+  status = 301
+
+[[redirects]]
+  from = "/cesty-za-poznanim"
+  to = "/#sluzby"
+  status = 301
+
+[[redirects]]
+  from = "/incentivni-produkty"
+  to = "/sluzby/incentivni-zajezdy"
+  status = 301
+
+[[redirects]]
+  from = "/kongresy-a-seminare"
+  to = "/sluzby/kongresy-seminare-cr"
+  status = 301
+
+[[redirects]]
+  from = "/sluzebni-cesty"
+  to = "/sluzby/sluzebni-cesty"
+  status = 301
+
+[[redirects]]
+  from = "/sport-travel"
+  to = "/sluzby/sport-travel"
+  status = 301
+
+[[redirects]]
+  from = "/letenky"
+  to = "/sluzby/sluzebni-cesty"
+  status = 301

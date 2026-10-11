@@ -6,4 +6,15 @@
 // You can pass additional config via defineConfig({ vite: { ... } }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-export default defineConfig();
+// Statický build pro Netlify (dist/client) — bez Cloudflare Workeru.
+// Všechny stránky se předrenderují do HTML (SEO, meta tagy, hreflang).
+export default defineConfig({
+  cloudflare: false,
+  tanstackStart: {
+    prerender: {
+      enabled: true,
+      crawlLinks: true,
+      autoSubfolderIndex: true,
+    },
+  },
+});
