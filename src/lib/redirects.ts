@@ -6,7 +6,7 @@ export const LEGACY_REDIRECTS: Record<string, string> = {
   reference: "/#reference",
   "reference-test0": "/#reference",
   kontakt: "/kontakty",
-  "ke-stazeni": "/",
+  "ke-stazeni": "/#ke-stazeni",
   aktuality: "/",
   fotografie: "/",
   sitemap: "/",

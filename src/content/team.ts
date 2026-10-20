@@ -1,50 +1,75 @@
-// Tým SIT Travel. Pořadí odpovídá domluvě s Pavlem: Pavel, bratr, Lucka, Renata, Alena.
-// Jména jsou zatím záměrně prázdná — na webu se zobrazí zástupný text „Jméno doplníme“.
-// Skutečná jména doplnit do `name` (id vpravo napovídá, kdo je kdo).
+// Tým SIT Travel — kontakty dodal Pavel Vlk (18. 10. 2026).
+// Pořadí: partneři, poté služební cesty a konference / incentiva / eventy.
 //
-// DOPLNIT před spuštěním (označeno `todo`):
-//  - celá jména, pozice, e-maily a mobily (u členů, kde pole chybí, se nezobrazí / ukáže se zástupný text)
-//  - fotky: uložit do src/assets/team/ (upravené AI, světle zelené pozadí) a doplnit `photo`
-//  - Pavlův souhlas i souhlas ostatních se zveřejněním fotek a kontaktů
-// E-maily převzaty z auditu schránek (označeno jako ponechat); jména Renaty a Aleny z adres schránek.
+// Místo fotek jsou zatím ilustrované avatary (src/assets/team/*.webp, průhledné pozadí, 640×640).
+// Až klient schválí fotky, stačí soubory přepsat — import zůstane stejný.
+// Před spuštěním ověřit souhlas členů týmu se zveřejněním kontaktů.
 
 import type { Locale } from "@/lib/i18n";
+import frantisekPacholik from "@/assets/team/frantisek-pacholik.webp";
+import pavelVlk from "@/assets/team/pavel-vlk.webp";
+import josefSpacek from "@/assets/team/josef-spacek.webp";
+import alenaBright from "@/assets/team/alena-bright.webp";
+import renataFelcarkova from "@/assets/team/renata-felcarkova.webp";
+import lucieVlkova from "@/assets/team/lucie-vlkova.webp";
 
 export interface TeamMember {
   id: string;
   name: string;
   role: Record<Locale, string>;
-  email?: string;
+  email: string;
   phone?: string;
-  /** Import fotky z src/assets/team/ */
-  photo?: string;
-  /** Údaje nejsou potvrzené / chybí. */
-  todo?: boolean;
+  /** Ilustrace / fotka z src/assets/team/ */
+  photo: string;
 }
 
 export const team: TeamMember[] = [
   {
+    id: "frantisek-pacholik",
+    photo: frantisekPacholik,
+    name: "František Pacholík",
+    role: { cs: "Partner", en: "Partner" },
+    email: "pacholik@sittravel.cz",
+    phone: "+420 602 303 152",
+  },
+  {
     id: "pavel-vlk",
-    name: "",
-    role: { cs: "", en: "" },
+    photo: pavelVlk,
+    name: "Pavel Vlk",
+    role: { cs: "Partner", en: "Partner" },
     email: "vlk@sittravel.cz",
     phone: "+420 606 209 108",
-    todo: true,
   },
-  { id: "bratr", name: "", role: { cs: "", en: "" }, todo: true },
-  { id: "lucie", name: "", role: { cs: "", en: "" }, todo: true },
   {
-    id: "renata-felcarkova",
-    name: "",
-    role: { cs: "", en: "" },
-    email: "renata.felcarkova@sittravel.cz",
-    todo: true,
+    id: "josef-spacek",
+    photo: josefSpacek,
+    name: "Josef Špaček",
+    role: { cs: "Služební cesty", en: "Business travel" },
+    email: "spacek@sittravel.cz",
+    phone: "+420 606 264 059",
   },
   {
     id: "alena-bright",
-    name: "",
-    role: { cs: "", en: "" },
+    photo: alenaBright,
+    name: "Alena Bright",
+    role: { cs: "Konference a incentiva", en: "Conferences and incentives" },
     email: "alena.bright@sittravel.cz",
-    todo: true,
+    phone: "+420 734 244 133",
+  },
+  {
+    id: "renata-felcarkova",
+    photo: renataFelcarkova,
+    name: "Renata Felčárková",
+    role: { cs: "Konference a incentiva", en: "Conferences and incentives" },
+    email: "renata.felcarkova@sittravel.cz",
+    phone: "+420 773 973 175",
+  },
+  {
+    id: "lucie-vlkova",
+    photo: lucieVlkova,
+    name: "Lucie Vlková",
+    role: { cs: "Konference a eventy", en: "Conferences and events" },
+    email: "lucie.vlkova@sittravel.cz",
+    phone: "+420 733 750 640",
   },
 ];

@@ -40,9 +40,21 @@ const cs = {
     heading: "Poznejte lidi, se kterými budete mluvit",
     sub: "Stabilní tým, který Vaše požadavky zná a zodpovídá za ně osobně.",
     allContacts: "Všechny kontakty →",
-    placeholderRole: "Pozice doplníme",
-    placeholderName: "Jméno doplníme",
-    photoAlt: "Fotografie:",
+    photoAlt: "Ilustrace:",
+  },
+  downloads: {
+    eyebrow: "Ke stažení",
+    heading: "Dokumenty SIT Travel",
+    sub: "Brožura, smluvní podmínky i potvrzení o pojištění cestovní kanceláře — vše ve formátu PDF.",
+    download: "Stáhnout",
+    items: {
+      brochure: { title: "Brožura SIT Travel", meta: "PDF · 8,6 MB" },
+      terms: { title: "Všeobecné smluvní podmínky", meta: "PDF · 181 kB" },
+      insurance: {
+        title: "Pojistka CK",
+        meta: "PDF · 148 kB · Platí do 20. 6. 2027",
+      },
+    },
   },
   consent: {
     title: "Cookies a externí obsah",
@@ -150,9 +162,21 @@ const en: Ui = {
     heading: "Meet the people you will be talking to",
     sub: "A stable team that knows your requirements and takes personal responsibility for them.",
     allContacts: "All contacts →",
-    placeholderRole: "Role to be added",
-    placeholderName: "Name to be added",
-    photoAlt: "Photo:",
+    photoAlt: "Illustration:",
+  },
+  downloads: {
+    eyebrow: "Downloads",
+    heading: "SIT Travel documents",
+    sub: "Our brochure, general terms and conditions and the travel agency insolvency insurance certificate — all as PDF files.",
+    download: "Download",
+    items: {
+      brochure: { title: "SIT Travel brochure", meta: "PDF · 8.6 MB" },
+      terms: { title: "General terms and conditions", meta: "PDF · 181 kB · Czech" },
+      insurance: {
+        title: "Travel agency insurance certificate",
+        meta: "PDF · 148 kB · Czech · Valid until 20 June 2027",
+      },
+    },
   },
   consent: {
     title: "Cookies and external content",

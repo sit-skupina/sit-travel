@@ -38,7 +38,7 @@
 
 [[redirects]]
   from = "/ke-stazeni"
-  to = "/"
+  to = "/#ke-stazeni"
   status = 301
 
 [[redirects]]

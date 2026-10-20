@@ -7,8 +7,8 @@ import { TeamGrid } from "@/components/TeamGrid";
 import { HowItWorks } from "@/components/HowItWorks";
 import { AboutBlock } from "@/components/AboutBlock";
 import { Button } from "@/components/ui/button";
-import { Clock, Shield, Phone, Mail, Plane, ChevronDown } from "lucide-react";
-import { COMPANY, BROCHURE_FILENAME } from "@/lib/site";
+import { Clock, Shield, Phone, Mail, Plane, ChevronDown, FileText, Download } from "lucide-react";
+import { COMPANY, BROCHURE_FILENAME, DOCS } from "@/lib/site";
 import { pagePath, serviceHref, useLocale } from "@/lib/i18n";
 import { home as homeContent } from "@/content/home";
 import { services } from "@/content/services";
@@ -29,7 +29,6 @@ import zeppelin from "@/assets/clients/zeppelin.png";
 import heroBg from "@/assets/hero-bg.webp";
 import heroBg2 from "@/assets/hero-bg-2.webp";
 import heroBg3 from "@/assets/hero-bg-3.webp";
-import brozura from "@/assets/SIT Travel brozura 2025 UPDATE (1).pdf";
 
 // Reference podle seznamu od Pavla. Pořadí odpovídá rozložení mřížky (logoGrid níže):
 // široká loga jsou na pozicích se šířkou 2 sloupce.
@@ -122,7 +121,7 @@ export function HomePage() {
               <a href="#kontakt">{c.hero.cta}</a>
             </Button>
             <Button variant="ghost-light" size="cta" asChild>
-              <a href={brozura} download={BROCHURE_FILENAME[locale]}>
+              <a href={DOCS.brochure} download={BROCHURE_FILENAME[locale]}>
                 {c.hero.brochure}
               </a>
             </Button>
@@ -345,6 +344,44 @@ export function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Ke stažení */}
+      <section id="ke-stazeni" className="downloads-section">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <div className="downloads-header">
+            <span className="about-eyebrow">{ui.downloads.eyebrow}</span>
+            <h2 className="downloads-heading font-serif">{ui.downloads.heading}</h2>
+            <p className="downloads-sub">{ui.downloads.sub}</p>
+          </div>
+          <ul className="downloads-list">
+            {(
+              [
+                ["brochure", DOCS.brochure, BROCHURE_FILENAME[locale]],
+                ["terms", DOCS.terms, undefined],
+                ["insurance", DOCS.insurance, undefined],
+              ] as const
+            ).map(([key, href, filename]) => (
+              <li key={key}>
+                <a
+                  href={href}
+                  className="download-card"
+                  {...(filename ? { download: filename } : { target: "_blank", rel: "noreferrer" })}
+                >
+                  <FileText size={26} aria-hidden="true" className="download-icon" />
+                  <span className="download-text">
+                    <span className="download-title">{ui.downloads.items[key].title}</span>
+                    <span className="download-meta">{ui.downloads.items[key].meta}</span>
+                  </span>
+                  <span className="download-action">
+                    {ui.downloads.download}
+                    <Download size={15} aria-hidden="true" />
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

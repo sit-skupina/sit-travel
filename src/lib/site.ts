@@ -35,6 +35,7 @@ export const SPORT_TRAVEL_URL = "";
 
 /** Dokumenty ve /public/dokumenty — při obnově jen přepsat soubor, URL zůstane. */
 export const DOCS = {
+  brochure: "/dokumenty/sit-travel-brozura.pdf",
   terms: "/dokumenty/smluvni-podminky-sit-travel.pdf",
   /**
    * Pojistka CK (záruka pro případ úpadku). Platí 21. 6. 2026 – 20. 6. 2027.

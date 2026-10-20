@@ -15,6 +15,9 @@ export default defineConfig({
       enabled: true,
       crawlLinks: true,
       autoSubfolderIndex: true,
+      // Statické soubory z public/ (PDF) se nesmí předrenderovat — crawler by je přepsal
+      // jako text a poškodil (PDF se pak otevře prázdné).
+      filter: ({ path }: { path: string }) => !path.startsWith("/dokumenty/"),
     },
   },
 });
