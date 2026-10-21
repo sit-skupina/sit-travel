@@ -22,7 +22,6 @@ import lindeGas from "@/assets/clients/linde-gas.png";
 import tipsport from "@/assets/clients/tipsport.png";
 import coloplast from "@/assets/clients/coloplast.png";
 import direct from "@/assets/clients/direct.png";
-import mmr from "@/assets/clients/mmr.png";
 import conseq from "@/assets/clients/conseq.svg";
 import medimat from "@/assets/clients/medimat.png";
 import zeppelin from "@/assets/clients/zeppelin.png";
@@ -41,7 +40,6 @@ const clientLogos = [
   { src: tipsport, alt: "Tipsport" },
   { src: coloplast, alt: "Coloplast" },
   { src: direct, alt: "Direct pojišťovna" },
-  { src: mmr, alt: "Ministerstvo pro místní rozvoj ČR" },
   { src: conseq, alt: "Conseq" },
   { src: medimat, alt: "Medimat" },
   { src: zeppelin, alt: "Zeppelin" },
@@ -56,9 +54,8 @@ const logoGrid = [
   { colSpan: 2, depth: 0.6 },
   { colSpan: 2, depth: 1.9 },
   { colSpan: 1, depth: 0.7 },
-  { colSpan: 2, depth: 1.1 },
-  { colSpan: 1, depth: 1.6 },
-  { colSpan: 1, depth: 0.9 },
+  { colSpan: 2, depth: 1.6 },
+  { colSpan: 2, depth: 0.9 },
   { colSpan: 2, depth: 1.3 },
 ];
 
@@ -93,7 +90,7 @@ export function HomePage() {
       <Navbar transparentOnTop />
 
       {/* Hero */}
-      <section className="relative flex min-h-[640px] items-center overflow-hidden bg-black md:min-h-[720px]">
+      <section className="relative flex min-h-[640px] items-center overflow-hidden bg-neutral-700 md:min-h-[720px]">
         <div className="absolute inset-0" aria-hidden>
           {[heroBg, heroBg2, heroBg3].map((src, i) => (
             <div
@@ -101,21 +98,27 @@ export function HomePage() {
               className="absolute inset-0 bg-cover bg-center animate-hero-fade"
               style={{
                 backgroundImage: `url(${src})`,
-                animationDelay: `${i * 7}s`,
+                // první snímek je od načtení plně viditelný (bez tmavého „nájezdu“ z prázdna)
+                animationDelay: `${i * 7 - 2}s`,
               }}
             />
           ))}
         </div>
-        <div className="absolute inset-0 bg-black/[0.52]" aria-hidden />
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40 md:from-black/35 md:via-black/25 md:to-black/40"
+          aria-hidden
+        />
 
         <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col px-5 pt-32 pb-12 md:px-8 md:pt-40 md:pb-16">
           <span className="inline-block text-xs font-medium uppercase tracking-[0.18em] text-white/85">
             {c.hero.eyebrow}
           </span>
-          <h1 className="mt-5 max-w-4xl text-[40px] leading-[1.08] text-white md:text-[64px]">
+          <h1 className="mt-5 max-w-4xl text-[40px] leading-[1.08] text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.4)] md:text-[64px]">
             {c.hero.h1}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-white/85 md:text-xl">{c.hero.lead}</p>
+          <p className="mt-6 max-w-2xl text-lg text-white/90 [text-shadow:0_1px_12px_rgba(0,0,0,0.45)] md:text-xl">
+            {c.hero.lead}
+          </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Button variant="primary" size="cta" asChild>
               <a href="#kontakt">{c.hero.cta}</a>

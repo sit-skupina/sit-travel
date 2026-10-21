@@ -53,6 +53,7 @@ export function Footer() {
             <a href={`mailto:${COMPANY.email}`} className="footer-link footer-contact-line">
               {COMPANY.email}
             </a>
+            <p className="footer-contact-line">{ui.footer.hours}</p>
             <a href={pagePath("contacts", locale)} className="footer-link footer-contact-line">
               {ui.footer.allContacts}
             </a>
@@ -70,7 +71,7 @@ export function Footer() {
               SIT Travel →
             </a>
             <a
-              href="https://www.sit-automotive.cz"
+              href="https://sitautomotive.cz"
               target="_blank"
               rel="noreferrer"
               className="footer-link"

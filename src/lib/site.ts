@@ -47,6 +47,6 @@ export const DOCS = {
 export const INSURANCE_VALID_TO = "2027-06-20";
 
 export const BROCHURE_FILENAME = {
-  cs: "SIT Travel brožura 2025.pdf",
-  en: "SIT Travel brochure 2025.pdf",
+  cs: "SIT Travel brožura 2026.pdf",
+  en: "SIT Travel brochure 2026.pdf",
 } as const;

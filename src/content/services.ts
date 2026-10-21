@@ -88,7 +88,7 @@ const cs: Record<ServiceId, ServiceContent> = {
     },
     cta: {
       h2: "Řekněte nám, co plánujete.",
-      subtitle: "Konkrétní návrh destinace a programu do 48 hodin.",
+      subtitle: "Konkrétní návrh destinace a programu rychle a na míru.",
       ctaLabel: "Poptejte incentivní zájezd",
       contactNote: "Máte otázku ještě před poptávkou?",
     },
@@ -287,7 +287,7 @@ const cs: Record<ServiceId, ServiceContent> = {
     },
     cta: {
       h2: "Plánujete příjezd zahraniční skupiny?",
-      subtitle: "Napište nám počet osob, termín a zájem skupiny. Návrh programu do 48 hodin.",
+      subtitle: "Napište nám počet osob, termín a zájem skupiny. Návrh programu rychle a na míru.",
       ctaLabel: "Poptejte incoming program",
       contactEmail: "incoming@sittravel.cz",
       contactPhone: "+420 777 858 524",
@@ -530,7 +530,7 @@ const en: Record<ServiceId, ServiceContent> = {
     },
     cta: {
       h2: "Tell us what you are planning.",
-      subtitle: "A concrete proposal for destination and programme within 48 hours.",
+      subtitle: "A concrete proposal for destination and programme, quickly and tailored to you.",
       ctaLabel: "Request an incentive trip",
       contactNote: "Have a question before you send an enquiry?",
     },
@@ -730,7 +730,7 @@ const en: Record<ServiceId, ServiceContent> = {
     cta: {
       h2: "Planning the arrival of an international group?",
       subtitle:
-        "Send us the number of people, the date and the group's interests. Programme proposal within 48 hours.",
+        "Send us the number of people, the date and the group's interests. Programme proposal quickly and tailored to you.",
       ctaLabel: "Request an incoming programme",
       contactEmail: "incoming@sittravel.cz",
       contactPhone: "+420 777 858 524",

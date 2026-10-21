@@ -56,7 +56,7 @@ Popis: Poděkování klíčovým partnerům formou nezapomenutelného výjezdu. 
 CTA SEKCE
 ---------
 H2: Řekněte nám, co plánujete.
-Subheadline: Konkrétní návrh destinace a programu do 48 hodin.
+Subheadline: Konkrétní návrh destinace a programu rychle a na míru.
 CTA tlačítko: Poptejte incentivní zájezd
 
 KONTAKT DOLE
@@ -233,7 +233,7 @@ GSM: +420 777 858 524
 CTA SEKCE
 ---------
 H2: Plánujete příjezd zahraniční skupiny?
-Subheadline: Napište nám počet osob, termín a zájem skupiny. Návrh programu do 48 hodin.
+Subheadline: Napište nám počet osob, termín a zájem skupiny. Návrh programu rychle a na míru.
 CTA tlačítko: Poptejte incoming program
 
 KONTAKT DOLE

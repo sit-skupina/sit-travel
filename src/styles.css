@@ -3007,7 +3007,7 @@ html {
   transition-delay: calc(var(--i) * 110ms + 900ms);
 }
 
-/* Kroužek 48 h */
+/* Kroužek s popiskem rychlosti */
 .hw-ring {
   position: absolute;
   left: 50%;

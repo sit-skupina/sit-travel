@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, FileText } from "lucide-react";
+import { Clock, Mail, MapPin, Phone, FileText } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ConsentMap } from "@/components/ConsentMap";
@@ -49,6 +49,13 @@ export function ContactsPage() {
                   <dd>
                     <a href={`tel:${COMPANY.phoneHref}`}>{COMPANY.phone}</a>
                   </dd>
+                </div>
+              </div>
+              <div className="ct-row">
+                <Clock size={18} color="#C9530E" aria-hidden="true" />
+                <div>
+                  <dt>{t.hoursLabel}</dt>
+                  <dd>{t.hours}</dd>
                 </div>
               </div>
               <div className="ct-row">
