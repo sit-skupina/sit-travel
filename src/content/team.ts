@@ -12,12 +12,13 @@ import josefSpacek from "@/assets/team/josef-spacek.webp";
 import alenaBright from "@/assets/team/alena-bright.webp";
 import renataFelcarkova from "@/assets/team/renata-felcarkova.webp";
 import lucieVlkova from "@/assets/team/lucie-vlkova.webp";
+import lucieVitkova from "@/assets/team/lucie-vitkova.webp";
 
 export interface TeamMember {
   id: string;
   name: string;
   role: Record<Locale, string>;
-  email: string;
+  email?: string;
   phone?: string;
   /** Ilustrace / fotka z src/assets/team/ */
   photo: string;
@@ -71,5 +72,12 @@ export const team: TeamMember[] = [
     role: { cs: "Konference a eventy", en: "Conferences and events" },
     email: "lucie.vlkova@sittravel.cz",
     phone: "+420 733 750 640",
+  },
+  {
+    // TODO: ověřit pozici (zatím odhad) a doplnit e-mail a telefon, až je klient dodá.
+    id: "lucie-vitkova",
+    photo: lucieVitkova,
+    name: "Lucie Vítková",
+    role: { cs: "Konference a eventy", en: "Conferences and events" },
   },
 ];

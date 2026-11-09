@@ -17,9 +17,11 @@ function Card({ member }: { member: TeamMember }) {
       <h3 className="team-name">{name}</h3>
       <p className="team-role">{role}</p>
       <div className="team-links">
-        <a href={`mailto:${member.email}`} className="team-link">
-          <Mail size={14} aria-hidden="true" /> {member.email}
-        </a>
+        {member.email && (
+          <a href={`mailto:${member.email}`} className="team-link">
+            <Mail size={14} aria-hidden="true" /> {member.email}
+          </a>
+        )}
         {member.phone && (
           <a href={`tel:${member.phone.replace(/\s/g, "")}`} className="team-link">
             <Phone size={14} aria-hidden="true" /> {member.phone}
