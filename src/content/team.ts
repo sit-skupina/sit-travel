@@ -74,10 +74,11 @@ export const team: TeamMember[] = [
     phone: "+420 733 750 640",
   },
   {
-    // TODO: ověřit pozici (zatím odhad) a doplnit e-mail a telefon, až je klient dodá.
     id: "lucie-vitkova",
     photo: lucieVitkova,
     name: "Lucie Vítková",
-    role: { cs: "Konference a eventy", en: "Conferences and events" },
+    role: { cs: "Privátní servis", en: "Private service" },
+    email: "lucie.vitkova@sittravel.cz",
+    phone: "+420 602 959 105",
   },
 ];
